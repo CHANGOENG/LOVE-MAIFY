@@ -1,0 +1,341 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Hexo中Buttefly主题公告栏设置与适配（十二） | 偷掉月亮</title><meta name="author" content="MAIFY美菲"><meta name="copyright" content="MAIFY美菲"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="原文地址，阅读效果更佳：Hexo中Buttefly主题美化进阶续篇（十一） | 偷掉月亮 (moonshuo.cn) 大家好，我是阿硕，专注与后端，略懂前端的一个菜鸟程序猿，今天将为大家讲述Butterfly主题公告栏的设置。  原作者链接：Butterfly 主题首页增加公告 | realwds’s blog 作者的魔改：  适配了双栏的布局 增加了超链接设置，点击对应的公告即可进入到相应的文章">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo中Buttefly主题公告栏设置与适配（十二）">
+<meta property="og:url" content="https://moonshuo.cn/posts/46856.html">
+<meta property="og:site_name" content="偷掉月亮">
+<meta property="og:description" content="原文地址，阅读效果更佳：Hexo中Buttefly主题美化进阶续篇（十一） | 偷掉月亮 (moonshuo.cn) 大家好，我是阿硕，专注与后端，略懂前端的一个菜鸟程序猿，今天将为大家讲述Butterfly主题公告栏的设置。  原作者链接：Butterfly 主题首页增加公告 | realwds’s blog 作者的魔改：  适配了双栏的布局 增加了超链接设置，点击对应的公告即可进入到相应的文章">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://moonshuo.cn/cover/13.jpg">
+<meta property="article:published_time" content="2022-12-10T02:05:53.550Z">
+<meta property="article:modified_time" content="2022-12-10T02:14:20.198Z">
+<meta property="article:author" content="MAIFY美菲">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Butterfly">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://moonshuo.cn/cover/13.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://moonshuo.cn/posts/46856"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><link rel="stylesheet" href="../css/index.css" ><link rel="stylesheet" href="../pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css"  media="print" onload="this.media='all'"><link rel="stylesheet" href="../pluginsSrc/@fancyapps/ui/dist/fancybox.css"  media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"../search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: '../pluginsSrc/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: '../pluginsSrc/flickr-justified-gallery/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo中Buttefly主题公告栏设置与适配（十二）',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-12-10 10:14:20'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="../css/iconfont.css" ><link rel="stylesheet" href="../css/myStyle.css" ><link rel="stylesheet" href="../css/fontSetting.css" ><link href="../css/toastr.css"  rel="stylesheet"><link href="../css/swiper-bundle.min.css"  rel="stylesheet"><link rel="stylesheet" type="text/css" href="../css/heoMainColor.css" ><link rel="stylesheet" type="text/css" href="../css/poem.css" ><svg aria-hidden="true" style="position:absolute; overflow:hidden; width:0; height:0"><symbol id="icon-sun" viewBox="0 0 1024 1024"><path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path><path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path><path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path><path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path></symbol><symbol id="icon-moon" viewBox="0 0 1024 1024"><path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path><path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path></symbol></svg><!-- hexo injector head_end start --><link rel="stylesheet" href="../../cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css" />
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="../img/avatar.gif"  onerror="onerror=null;src='/img/404.jpg'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="../archives/index.htm" ><div class="headline">文章</div><div class="length-num">14</div></a><a href="../tags/index.htm" ><div class="headline">标签</div><div class="length-num">2</div></a><a href="../categories/index.htm" ><div class="headline">分类</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="../index.htm" ><i class="fa-fw iconfont icon-shouye"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="../archives/index.htm" ><i class="fa-fw iconfont icon-riqi"></i><span> 时间线</span></a></div><div class="menus_item"><a class="site-page" href="../tags/index.htm" ><i class="fa-fw iconfont icon-biaoqian"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="../categories/index.htm" ><i class="fa-fw iconfont icon-fenlei21"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-xiuxian"></i><span> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="javascript:if(confirm('https://music.163.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ������������ļ�δ�ҵ���  \n\n�����ڷ������ϴ���?'))window.location='https://music.163.com/'" ><i class="fa-fw iconfont icon-yinle"></i><span> 音乐</span></a></li><li><a class="site-page child" href="javascript:if(confirm('https://www.csdn.net/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ������������ļ�δ�ҵ���  \n\n�����ڷ������ϴ���?'))window.location='https://www.csdn.net/'" ><i class="fa-fw iconfont icon-shuji"></i><span> 书籍</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="../about/index.htm" ><i class="fa-fw iconfont icon-guanyuwomen"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://moonshuo.cn/cover/13.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="../index.htm" >偷掉月亮</a></span><span id="tp-weather-widget"></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="../index.htm" ><i class="fa-fw iconfont icon-shouye"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="../archives/index.htm" ><i class="fa-fw iconfont icon-riqi"></i><span> 时间线</span></a></div><div class="menus_item"><a class="site-page" href="../tags/index.htm" ><i class="fa-fw iconfont icon-biaoqian"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="../categories/index.htm" ><i class="fa-fw iconfont icon-fenlei21"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-xiuxian"></i><span> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="javascript:if(confirm('https://music.163.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ������������ļ�δ�ҵ���  \n\n�����ڷ������ϴ���?'))window.location='https://music.163.com/'" ><i class="fa-fw iconfont icon-yinle"></i><span> 音乐</span></a></li><li><a class="site-page child" href="javascript:if(confirm('https://www.csdn.net/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ������������ļ�δ�ҵ���  \n\n�����ڷ������ϴ���?'))window.location='https://www.csdn.net/'" ><i class="fa-fw iconfont icon-shuji"></i><span> 书籍</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="../about/index.htm" ><i class="fa-fw iconfont icon-guanyuwomen"></i><span> 关于</span></a></div></div><center id="name-container"><a id="page-name" href="javascript:scrollToTop()">PAGE_NAME</a></center></div><div id="nav-right"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Hexo中Buttefly主题公告栏设置与适配（十二）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-10T02:05:53.550Z" title="发表于 2022-12-10 10:05:53">2022-12-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-12-10T02:14:20.198Z" title="更新于 2022-12-10 10:14:20">2022-12-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="../categories/博客搭建/index.htm" >博客搭建</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Hexo中Buttefly主题公告栏设置与适配（十二）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>原文地址，阅读效果更佳：<a href="12667.html" >Hexo中Buttefly主题美化进阶续篇（十一） | 偷掉月亮 (moonshuo.cn)</a></p>
+<p>大家好，我是阿硕，专注与后端，略懂前端的一个菜鸟程序猿，今天将为大家讲述Butterfly主题公告栏的设置。</p>
+<blockquote>
+<p>原作者链接：<a target="_blank" rel="noopener" href="javascript:if(confirm('https://blog.realwds.com/posts/39c5cc87.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://blog.realwds.com/posts/39c5cc87.html'" >Butterfly 主题首页增加公告 | realwds’s blog</a></p>
+<p>作者的魔改：</p>
+<ol>
+<li>适配了双栏的布局</li>
+<li>增加了超链接设置，点击对应的公告即可进入到相应的文章</li>
+<li>美化了一些样式，更改了与一些插件的冲突</li>
+</ol>
+</blockquote>
+<h1 id="轮播公告栏设置"><a href="#轮播公告栏设置" class="headerlink" title="轮播公告栏设置"></a>轮播公告栏设置</h1><p>声明：如果使用这个效果的公告栏，大家对于轮播组件就需要做出更改，<a target="_blank" rel="noopener" href="javascript:if(confirm('https://akilar.top/posts/8e1264d1/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://akilar.top/posts/8e1264d1/'" >Swiper Bar | Akilarの糖果屋</a>大佬的插件就不能使用了（<font color='red'>否则公告栏会出现在轮播组件下面</font>），要使用旧版源码魔改方案，但是博主的版本是4.5.0也可以使用旧版的方案</p>
+<p><img src="../images/202212101006527.png"  alt="image-20221208101801367"></p>
+<p>关于公告栏的设置，由于博主使用的双栏配置，而现在很多网上的教程都是关于单栏的，会出现兼容的问题，看来好久的源代码，终于改正过来，<font color='red'>同时为了公告的可用性增强，所以重新花了一点时间学习了pug的语法，现在的公告可以点击对应的公告，就可以超链接到相应的文章</font></p>
+<h2 id="建立公告页"><a href="#建立公告页" class="headerlink" title="建立公告页"></a>建立公告页</h2><details class="toggle" ><summary class="toggle-button" style="">效果</summary><div class="toggle-content"><p><img src="../images/202212101007401.png" /></p>
+</div></details>
+<p>建立themes/butterfly/scripts/tag/timeline.js文件，复制以下的代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">postTimeline</span>(<span class="params">args, content</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (args.<span class="property">length</span> &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">`&lt;div class=&quot;timeline&quot;&gt;&lt;p class=&#x27;p h2&#x27;&gt;<span class="subst">$&#123;args&#125;</span>&lt;/p&gt;<span class="subst">$&#123;content&#125;</span>&lt;/div&gt;`</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">`&lt;div class=&quot;timeline&quot;&gt;<span class="subst">$&#123;content&#125;</span>&lt;/div&gt;`</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">postTimenode</span>(<span class="params">args, content</span>) &#123;</span><br><span class="line">  args = args.<span class="title function_">join</span>(<span class="string">&#x27; &#x27;</span>).<span class="title function_">split</span>(<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line">  <span class="keyword">var</span> time = args[<span class="number">0</span>]</span><br><span class="line">  <span class="keyword">return</span> <span class="string">`&lt;div class=&quot;timenode&quot;&gt;&lt;div class=&quot;meta&quot;&gt;&lt;p&gt;<span class="subst">$&#123;hexo.render.renderSync(&#123;text: time, engine: <span class="string">&#x27;markdown&#x27;</span>&#125;)&#125;</span>&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;body&quot;&gt;<span class="subst">$&#123;hexo.render.renderSync(&#123;text: content, engine: <span class="string">&#x27;markdown&#x27;</span>&#125;).split(<span class="string">&#x27;\n&#x27;</span>).join(<span class="string">&#x27;&#x27;</span>)&#125;</span>&lt;/div&gt;&lt;/div&gt;`</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// &#123;% timeline %&#125;</span></span><br><span class="line"><span class="comment">// ... timenode ...</span></span><br><span class="line"><span class="comment">// &#123;% endtimeline %&#125;</span></span><br><span class="line">hexo.<span class="property">extend</span>.<span class="property">tag</span>.<span class="title function_">register</span>(<span class="string">&#x27;timeline&#x27;</span>, postTimeline, &#123;<span class="attr">ends</span>: <span class="literal">true</span>&#125;);</span><br><span class="line"><span class="comment">// &#123;% timenode time %&#125;</span></span><br><span class="line"><span class="comment">// what happened</span></span><br><span class="line"><span class="comment">// &#123;% endtimenode %&#125;</span></span><br><span class="line">hexo.<span class="property">extend</span>.<span class="property">tag</span>.<span class="title function_">register</span>(<span class="string">&#x27;timenode&#x27;</span>, postTimenode, &#123;<span class="attr">ends</span>: <span class="literal">true</span>&#125;);</span><br></pre></td></tr></table></figure>
+<p>建立themes/butterfly/sources/css/_tags/timeline.styl文件，复制以下的代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span></span><br><span class="line">  &amp;<span class="selector-class">.timenode</span></span><br><span class="line">    <span class="attribute">position</span> relative</span><br><span class="line">    &amp;<span class="selector-pseudo">:before</span></span><br><span class="line">      <span class="attribute">top</span> <span class="number">0</span></span><br><span class="line">      <span class="attribute">height</span> <span class="number">6px</span></span><br><span class="line">    &amp;<span class="selector-pseudo">:after</span></span><br><span class="line">      <span class="attribute">top</span> <span class="number">26px</span></span><br><span class="line">      <span class="attribute">height</span> calc(<span class="number">100%</span> - <span class="number">26px</span>)</span><br><span class="line">    &amp;<span class="selector-pseudo">:last-child</span></span><br><span class="line">      &amp;<span class="selector-pseudo">:after</span></span><br><span class="line">        <span class="attribute">height</span> calc(<span class="number">100%</span> - <span class="number">26px</span> - <span class="number">16px</span>)</span><br><span class="line">        <span class="attribute">border-bottom-left-radius</span> <span class="number">2px</span></span><br><span class="line">        <span class="attribute">border-bottom-right-radius</span> <span class="number">2px</span></span><br><span class="line">    <span class="selector-class">.meta</span></span><br><span class="line">      <span class="attribute">position</span> relative</span><br><span class="line">      <span class="attribute">color</span> <span class="selector-tag">var</span>(<span class="attr">--tab-botton-color</span>)</span><br><span class="line">      <span class="attribute">font-size</span> <span class="number">0.375rem</span></span><br><span class="line">      <span class="attribute">line-height</span> <span class="number">32px</span></span><br><span class="line">      <span class="attribute">height</span> <span class="number">32px</span></span><br><span class="line">      &amp;<span class="selector-pseudo">:before</span></span><br><span class="line">        <span class="attribute">background</span> rgba(<span class="number">68</span>, <span class="number">215</span>, <span class="number">182</span>, <span class="number">0.5</span>)</span><br><span class="line">        <span class="attribute">width</span> <span class="number">16px</span></span><br><span class="line">        <span class="attribute">height</span> <span class="number">16px</span></span><br><span class="line">        <span class="attribute">border-radius</span> <span class="number">8px</span></span><br><span class="line">      &amp;<span class="selector-pseudo">:after</span></span><br><span class="line">        <span class="attribute">background</span> <span class="selector-id">#44d7b6</span></span><br><span class="line">        <span class="attribute">margin-left</span> <span class="number">2px</span></span><br><span class="line">        <span class="attribute">margin-top</span> <span class="number">2px</span></span><br><span class="line">        <span class="attribute">width</span> <span class="number">12px</span></span><br><span class="line">        <span class="attribute">height</span> <span class="number">12px</span></span><br><span class="line">        <span class="attribute">border-radius</span> <span class="number">6px</span></span><br><span class="line">        <span class="attribute">transform</span> scale(<span class="number">0.5</span>)</span><br><span class="line">      <span class="selector-tag">p</span></span><br><span class="line">        <span class="attribute">font-weight</span> bold !important</span><br><span class="line">        <span class="attribute">margin</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">24px</span> !important</span><br><span class="line">    <span class="selector-class">.body</span></span><br><span class="line">      <span class="attribute">margin</span> <span class="number">4px</span> <span class="number">0</span> <span class="number">10px</span> <span class="number">24px</span></span><br><span class="line">      <span class="attribute">padding</span> <span class="number">10px</span></span><br><span class="line">      <span class="attribute">border-radius</span> <span class="number">12px</span></span><br><span class="line">      <span class="attribute">background</span> <span class="selector-id">#efeded</span></span><br><span class="line">      <span class="attribute">display</span> inline-block</span><br><span class="line">      <span class="selector-tag">p</span></span><br><span class="line">        &amp;<span class="selector-pseudo">:first</span>-child</span><br><span class="line">          <span class="attribute">margin-top</span> <span class="number">0</span> !important</span><br><span class="line">        &amp;<span class="selector-pseudo">:last-child</span></span><br><span class="line">          <span class="attribute">margin-bottom</span> <span class="number">0</span> !important</span><br><span class="line">      <span class="selector-class">.highlight</span></span><br><span class="line">        <span class="attribute">background</span> <span class="selector-id">#fff7ea</span></span><br><span class="line">        <span class="attribute">filter</span> grayscale(<span class="number">0%</span>)</span><br><span class="line">        <span class="selector-tag">figcaption</span></span><br><span class="line">          <span class="attribute">background</span> <span class="selector-id">#ffeed2</span></span><br><span class="line">        <span class="selector-class">.gutter</span></span><br><span class="line">          <span class="attribute">background</span> <span class="selector-id">#ffedd0</span></span><br><span class="line">    &amp;<span class="selector-pseudo">:hover</span></span><br><span class="line">      <span class="selector-class">.meta</span></span><br><span class="line">        <span class="attribute">color</span> <span class="selector-id">#444</span></span><br><span class="line">        &amp;<span class="selector-pseudo">:before</span></span><br><span class="line">          <span class="attribute">background</span> rgba(<span class="number">255</span>, <span class="number">87</span>, <span class="number">34</span>, <span class="number">0.5</span>)</span><br><span class="line">        &amp;<span class="selector-pseudo">:after</span></span><br><span class="line">          <span class="attribute">background</span> <span class="selector-id">#ff5722</span></span><br><span class="line">          <span class="attribute">transform</span> scale(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.timenode</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.timenode</span><span class="selector-pseudo">:after</span></span><br><span class="line">  <span class="attribute">content</span> &quot;&quot;</span><br><span class="line">  <span class="attribute">z-index</span> <span class="number">1</span></span><br><span class="line">  <span class="attribute">position</span> absolute</span><br><span class="line">  <span class="attribute">background</span> rgba(<span class="number">68</span>, <span class="number">215</span>, <span class="number">182</span>, <span class="number">0.5</span>)</span><br><span class="line">  <span class="attribute">width</span> <span class="number">2px</span></span><br><span class="line">  <span class="attribute">left</span> <span class="number">7px</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.timenode</span> <span class="selector-class">.meta</span>,</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.timenode</span> <span class="selector-class">.body</span></span><br><span class="line">  <span class="attribute">max-width</span> calc(<span class="number">100%</span> - <span class="number">24px</span>)</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.timenode</span> <span class="selector-class">.meta</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.timenode</span> <span class="selector-class">.meta</span><span class="selector-pseudo">:after</span></span><br><span class="line">  <span class="attribute">content</span> &quot;&quot;</span><br><span class="line">  <span class="attribute">position</span> absolute</span><br><span class="line">  <span class="attribute">top</span> <span class="number">8px</span></span><br><span class="line">  <span class="attribute">z-index</span> <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="selector-attr">[data-theme=<span class="string">&quot;dark&quot;</span>]</span></span><br><span class="line">  <span class="selector-tag">div</span></span><br><span class="line">    &amp;<span class="selector-class">.timenode</span></span><br><span class="line">      <span class="selector-class">.body</span></span><br><span class="line">        <span class="attribute">background</span> <span class="selector-id">#2c2c2c</span></span><br><span class="line">      &amp;<span class="selector-pseudo">:hover</span></span><br><span class="line">        <span class="selector-class">.meta</span></span><br><span class="line">          <span class="attribute">color</span> <span class="selector-id">#ccd0d7</span></span><br><span class="line">      <span class="selector-class">.meta</span></span><br><span class="line">        <span class="attribute">color</span> rgba(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.6</span>)</span><br><span class="line">    &amp;<span class="selector-class">.timeline</span></span><br><span class="line">      <span class="selector-tag">p</span></span><br><span class="line">        &amp;<span class="selector-class">.p</span></span><br><span class="line">          &amp;<span class="selector-class">.h2</span></span><br><span class="line">            <span class="attribute">color</span> rgba(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.6</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="引入公告模板"><a href="#引入公告模板" class="headerlink" title="引入公告模板"></a>引入公告模板</h2><p>这里是重点，博主对原作者的代码做了一些改动，使得更加具有实用性，点击超链接即可到对应的文章，而且显示的更加全面</p>
+<p>新建themes/butterfly/layout/includes/homeNotice.pug文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#noticeList.<span class="property">container</span></span><br><span class="line">    .<span class="property">nlogo</span>=<span class="string">&quot;公告&quot;</span></span><br><span class="line">    .<span class="property">swiper</span>-container</span><br><span class="line">        #notice-item.<span class="property">swiper</span>-wrapper</span><br><span class="line">            <span class="keyword">if</span> site.<span class="property">data</span>.<span class="property">notice</span></span><br><span class="line">                each i <span class="keyword">in</span> site.<span class="property">data</span>.<span class="property">notice</span></span><br><span class="line">                    <span class="title function_">a</span>(href=<span class="string">`<span class="subst">$&#123;i.href&#125;</span>`</span>,title=<span class="string">&quot;查看详情&quot;</span>).<span class="property">li</span>-style.<span class="property">swiper</span>-slide=i.<span class="property">date</span>+<span class="string">&#x27;:&#x27;</span>+i.<span class="property">msg</span></span><br><span class="line">    <span class="title function_">a</span>(href=<span class="string">&quot;/notice/&quot;</span>,title=<span class="string">&quot;查看全部公告&quot;</span>).<span class="property">i</span>.<span class="property">fas</span>.<span class="property">fa</span>-arrow-circle-right</span><br><span class="line">.<span class="property">js</span>-pjax</span><br><span class="line">    <span class="title function_">script</span>(src=<span class="string">&#x27;/js/swiper-bundle.min.js&#x27;</span>,data-pjax=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    script.</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Swiper</span>(<span class="string">&#x27;.swiper-container&#x27;</span>, &#123;</span><br><span class="line">            <span class="attr">direction</span>: <span class="string">&#x27;vertical&#x27;</span>,</span><br><span class="line">            <span class="attr">loop</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="attr">autoplay</span>: &#123;</span><br><span class="line">                <span class="attr">delay</span>: <span class="number">3000</span>,</span><br><span class="line">                <span class="attr">disableOnInteraction</span>: <span class="literal">true</span>,</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br></pre></td></tr></table></figure>
+<p>引入以下的css样式，在自己的自定义css文件中，在原作者的css基础做了一些变动</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#notice-item</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">25px</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">25px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-id">#notice-item</span> <span class="selector-class">.li-style</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">25px</span>;</span><br><span class="line">	<span class="attribute">font-weight</span>: <span class="number">500</span>;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">	-webkit-line-clamp: <span class="number">1</span>;</span><br><span class="line">	-webkit-box-orient: vertical;</span><br><span class="line">	<span class="attribute">overflow</span>: hidden;</span><br><span class="line">	<span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">	<span class="attribute">transition</span>: <span class="number">0.3s</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-id">#noticeList</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">background</span>: <span class="built_in">var</span>(--card-bg);</span><br><span class="line">	<span class="attribute">color</span>: <span class="built_in">var</span>(--font-color);</span><br><span class="line">	<span class="attribute">margin-top</span>: <span class="number">1rem</span>;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">0.6rem</span> <span class="number">1rem</span>;</span><br><span class="line">	<span class="attribute">border-radius</span>: <span class="number">12px</span>;</span><br><span class="line">	<span class="attribute">cursor</span>: pointer;</span><br><span class="line">	<span class="attribute">display</span>: flex;</span><br><span class="line">	<span class="attribute">align-items</span>: center;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-id">#noticeList</span> <span class="selector-class">.nlogo</span>&#123;</span><br><span class="line">	<span class="attribute">color</span>: <span class="built_in">var</span>(--font-color);</span><br><span class="line">	<span class="attribute">font-weight</span>: <span class="number">600</span>;</span><br><span class="line">	<span class="attribute">display</span>: inline;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-id">#noticeList</span> <span class="selector-class">.swiper-container</span>&#123;</span><br><span class="line">	<span class="attribute">display</span>: flex;</span><br><span class="line">	<span class="attribute">flex</span>: <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-id">#noticeList</span> <span class="selector-tag">i</span> &#123;</span><br><span class="line">	<span class="attribute">text-align</span>: right;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.swiper-slide</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#1fc7b6</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>最终引入公告模板，打开themes/butterfly/layout/index.pug</p>
+<div class="tabs" id="代码"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#代码-1">无轮播图</button></li><li class="tab"><button type="button" data-href="#代码-2">无轮播图</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="代码-1"><p>无轮播图，直接正常的添加即可显示</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">extends includes/layout<span class="selector-class">.pug</span></span><br><span class="line"></span><br><span class="line">block <span class="attribute">content</span></span><br><span class="line">  include ./includes/mixins/post-ui<span class="selector-class">.pug</span></span><br><span class="line">  <span class="selector-id">#recent-posts</span><span class="selector-class">.recent-posts</span></span><br><span class="line">    include includes/homeNotice<span class="selector-class">.pug</span></span><br><span class="line">    ....</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="代码-2"><p>有轮播图，include includes/homeNotice.pug在哪里，即决定了公告的位置在哪里</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">extends includes/layout<span class="selector-class">.pug</span></span><br><span class="line"></span><br><span class="line">block <span class="attribute">content</span></span><br><span class="line">  include ./includes/mixins/post-ui<span class="selector-class">.pug</span></span><br><span class="line">  <span class="selector-id">#recent-posts</span><span class="selector-class">.recent-posts</span></span><br><span class="line">    include includes/homeNotice<span class="selector-class">.pug</span></span><br><span class="line">    <span class="selector-class">.recent-post-item</span>(style=&#x27;<span class="attribute">height</span>:auto;<span class="attribute">width</span>:<span class="number">100%</span>;&#x27;)</span><br><span class="line">       !=partial(&#x27;includes/sliderbar&#x27;, &#123;&#125;, &#123;cache:true&#125;)</span><br><span class="line">    +postUI</span><br><span class="line">    include includes/pagination<span class="selector-class">.pug</span></span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<p>新建themes/butterfly/layout/includes/page/notice.pug，复制以下的代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#article-container</span></span><br><span class="line">  if top_img === false &amp;&amp; page<span class="selector-class">.tip</span></span><br><span class="line">    <span class="selector-tag">h1</span><span class="selector-class">.page-title</span><span class="selector-class">.page-title-has</span>= page<span class="selector-class">.title</span></span><br><span class="line">    <span class="selector-class">.page-title-tip</span>!= page<span class="selector-class">.tip</span></span><br><span class="line">  else </span><br><span class="line">    <span class="selector-tag">h1</span><span class="selector-class">.page-title</span>= page<span class="selector-class">.title</span></span><br><span class="line">    </span><br><span class="line">  != page<span class="selector-class">.content</span></span><br><span class="line"></span><br><span class="line">  <span class="selector-class">.timeline</span>(class=&quot;notice&quot;)</span><br><span class="line">    if site<span class="selector-class">.data</span><span class="selector-class">.notice</span></span><br><span class="line">      each <span class="selector-tag">i</span> in site<span class="selector-class">.data</span><span class="selector-class">.notice</span></span><br><span class="line">        <span class="selector-class">.timenode</span></span><br><span class="line">          <span class="selector-class">.meta</span></span><br><span class="line">            <span class="selector-tag">p</span></span><br><span class="line">            <span class="selector-tag">p</span>=<span class="selector-tag">i</span><span class="selector-class">.date</span></span><br><span class="line">            <span class="selector-tag">p</span></span><br><span class="line">          <span class="selector-class">.body</span></span><br><span class="line">            <span class="selector-tag">a</span>(href=`$&#123;<span class="selector-tag">i</span><span class="selector-class">.href</span>&#125;`,title=&quot;查看详情&quot;)<span class="selector-class">.p</span>=<span class="selector-tag">i</span><span class="selector-class">.msg</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>现在我们需要添加判断，避免渲染错误，打开themes/butterfly/layout/page.pug</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">when &#x27;categories&#x27;</span><br><span class="line">  include includes/page/categories<span class="selector-class">.pug</span></span><br><span class="line">+ when &#x27;notice&#x27;</span><br><span class="line">+   include includes/page/notice<span class="selector-class">.pug</span></span><br><span class="line">default</span><br><span class="line">  include includes/page/default-page<span class="selector-class">.pug</span></span><br></pre></td></tr></table></figure>
+<p>执行以下的命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page notice</span><br></pre></td></tr></table></figure>
+<p>并在新生成的index.md中关闭评论，设置公告标识</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">公告</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;notice&quot;</span></span><br><span class="line"><span class="attr">aside:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="string">...</span></span><br></pre></td></tr></table></figure>
+<p>最终新建source/_data/notice.yml，后续我们建立公告就这样建立（这里的source是在根目录下）</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">date:</span> <span class="number">2022-12-4</span></span><br><span class="line">  <span class="attr">msg:</span> <span class="string">腾讯云最新的简单部署方案更新</span></span><br><span class="line">  <span class="attr">href:</span> <span class="string">https://moonshuo.cn/posts/57170.html#加更</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="attr">date:</span> <span class="string">&quot;2022-03-05&quot;</span></span><br><span class="line">  <span class="attr">msg:</span> <span class="string">博客正式上线</span></span><br><span class="line">  <span class="attr">href:</span> <span class="string">https://moonshuo.cn/</span></span><br></pre></td></tr></table></figure>
+<p>最终在主题配置文件中引入以下的css文件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://unpkg.com/swiper@8/swiper-bundle.min.css&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>hexo三连之后即可看到效果</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="../index.htm" >MAIFY美菲</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="46856.html" >https://moonshuo.cn/posts/46856.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="javascript:if(confirm('https://creativecommons.org/licenses/by-nc-sa/4.0/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://creativecommons.org/licenses/by-nc-sa/4.0/'"  target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="../index.htm"  target="_blank">偷掉月亮</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="../tags/Hexo/index.htm" >Hexo</a><a class="post-meta__tags" href="../tags/Butterfly/index.htm" >Butterfly</a></div><div class="post_share"><div class="social-share" data-image="https://moonshuo.cn/cover/13.jpg" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="../pluginsSrc/butterfly-extsrc/sharejs/dist/css/share.min.css"  media="print" onload="this.media='all'"><script src="../pluginsSrc/butterfly-extsrc/sharejs/dist/js/social-share.min.js"  defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="16544.html" ><img class="prev-cover" src="../cover/14.jpg"  onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Hexo中Buttefly主题看板娘与自定义看板娘（十三）</div></div></a></div><div class="next-post pull-right"><a href="12667.html" ><img class="next-cover" src="../cover/12.jpg"  onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hexo中Buttefly主题美化进阶续篇（十一）</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="../img/avatar.gif"  onerror="this.onerror=null;this.src='/img/404.jpg'" alt这里是美菲的小站"/></div><div class="author-info__name">MAIFY美菲</div><div class="author-info__description">这是我的博客网站</div></div><div class="card-info-data site-data is-center"><a href="../archives/index.htm" ><div class="headline">文章</div><div class="length-num">14</div></a><a href="../tags/index.htm" ><div class="headline">标签</div><div class="length-num">2</div></a><a href="../categories/index.htm" ><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:2410419801@qq.com" target="_blank" title="邮箱"><i class="iconfont icon-youxiang"></i></a><a class="social-icon" href="tencent://message/?uin=2410419801&amp;Site=Sambow&amp;Menu=yes" target="_blank" title="QQ"><i class="iconfont icon-QQ1"></i></a><a class="social-icon" href="javascript:if(confirm('https://www.zhihu.com/people/tou-diao-yue-liang-28  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.zhihu.com/people/tou-diao-yue-liang-28'"  target="_blank" title="知乎"><i class="iconfont icon-shejiaotubiao-10"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AE%E6%92%AD%E5%85%AC%E5%91%8A%E6%A0%8F%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">轮播公告栏设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8B%E5%85%AC%E5%91%8A%E9%A1%B5"><span class="toc-number">1.1.</span> <span class="toc-text">建立公告页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E5%85%A5%E5%85%AC%E5%91%8A%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.2.</span> <span class="toc-text">引入公告模板</span></a></li></ol></li></ol></div></div><div class="card-widget" id="card-poem"><div id="poem_sentence"></div><div id="poem_info"><div id="poem_dynasty"></div><div id="poem_author"></div></div></div><script src="../js/jinrishici.js"  charset="utf-8"></script><script type="text/javascript">jinrishici.load(function(result) {
+var sentence = document.querySelector("#poem_sentence")
+var author = document.querySelector("#poem_author")
+var dynasty = document.querySelector("#poem_dynasty")
+
+var sentenceText = result.data.content
+sentenceText = sentenceText.substr(0, sentenceText.length - 1);
+sentence.innerHTML = sentenceText
+dynasty.innerHTML = result.data.origin.dynasty
+author.innerHTML = result.data.origin.author + '《' + result.data.origin.title + '》'
+});</script><div class="card-widget card-calendar"><div class="card-content"><div class="item-headline"><i class="fas fa-calendar"></i><span>文章日历</span></div><div class="widget" id="calendar"></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 By MAIFY美菲</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="javascript:if(confirm('https://hexo.io/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://hexo.io/'" >Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="javascript:if(confirm('https://github.com/jerryc127/hexo-theme-butterfly  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/jerryc127/hexo-theme-butterfly'" >Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="../js/utils.js" ></script><script src="../js/main.js" ></script><script src="../pluginsSrc/@fancyapps/ui/dist/fancybox.umd.js" ></script><script src="../js/search/local-search.js" ></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = '../pluginsSrc/mathjax/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'jprrWHMnf6HHsFTK7Bbcr7Kh-gzGzoHsz',
+      appKey: '608GDkDGq3eOLz8B3LSZo467',
+      avatar: 'monsterid',
+      serverURLs: 'https://jprrwhmn.lc-cn-n1-shared.com',
+      emojiMaps: "",
+      master: 'ef2aca03b77e6934e3a45ccc751c5e91',   //博主邮箱md5
+      tagMeta: ["色批博主","小伙伴","访客"],     //标识字段名
+      friends:  [],  //小伙伴邮箱Md5
+      path: window.location.pathname,
+      visitor: true
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('../js/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script src="../js/jquery.js" ></script><script src="../js/foot.js" ></script><script src="../js/nav.js" ></script><script type="text/javascript" src="../js/languages.js" ></script><script type="text/javascript" src="../js/calendar.js" ></script><script src="../js/weather.js" ></script><script src="../js/pace.min.js" ></script><script src="../js/copy.js" ></script><script src="../js/toastr.min.js" ></script><canvas id="universe"></canvas><script defer src="../js/universe.js" ></script><script defer src="../live2d-widget-master/autoload.js" ></script><script src="../js/sun_moon.js"  async></script><script id="click-heart" src="../pluginsSrc/butterfly-extsrc/dist/click-heart.min.js"  async="async" mobile="false"></script><script src="../pluginsSrc/pjax/pjax.min.js" ></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="https://moonshuo.cn/movies/"]):not([href="https://www.csdn.net/"]):not([href="https://moonshuo.cn/games/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('https://moonshuo.cn/404.html')
+  }
+})</script><script async data-pjax src="../../busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script></div></body></html>
