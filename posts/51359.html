@@ -1,448 +1,971 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Hexo中Buttefly主题Valine评论系统配置以及美化（七） | 偷掉月亮</title><meta name="author" content="MAIFY美菲"><meta name="copyright" content="MAIFY美菲"><meta name="format-detection" content="telephone=13361174893"><meta name="theme-color" content="#ffffff"><meta name="description" content="Valine系统的设置原文链接：Hexo中Buttefly主题Valine评论系统配置以及美化（七） | 偷掉月亮 (moonshuo.cn) 大家好，我是阿硕，专注与后端，略懂前端的一个菜鸟程序猿，今天教大家Hexo中valine评论的设置。 介绍之所以选择valine是因为操作简单，而且页面的变化的美化我们都可以进行配置，简单功能比较强大，而且快速安全，不要后端 更改配置123456comme">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hexo中Buttefly主题Valine评论系统配置以及美化（七）">
-<meta property="og:url" content="https://moonshuo.cn/posts/51359.html">
-<meta property="og:site_name" content="MAIFY美菲">
-<meta property="og:description" content="Valine系统的设置原文链接：Hexo中Buttefly主题Valine评论系统配置以及美化（七） | 偷掉月亮 (moonshuo.cn) 大家好，我是阿硕，专注与后端，略懂前端的一个菜鸟程序猿，今天教大家Hexo中valine评论的设置。 介绍之所以选择valine是因为操作简单，而且页面的变化的美化我们都可以进行配置，简单功能比较强大，而且快速安全，不要后端 更改配置123456comme">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s1.ax1x.com/2023/02/01/pSBQJ7F.jpg">
-<meta property="article:published_time" content="2022-11-06T11:44:33.209Z">
-<meta property="article:modified_time" content="2022-11-21T08:59:44.982Z">
-<meta property="article:author" content="MAIFY美菲">
-<meta property="article:tag" content="Hexo">
-<meta property="article:tag" content="Butterfly">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s1.ax1x.com/2023/02/01/pSBQJ7F.jpg"><link rel="shortcut icon " type="images/x-icon" href="http://www.jd.com/favicon.ico"><link rel="canonical" href="https://moonshuo.cn/posts/51359"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><link rel="stylesheet" href="../css/index.css" ><link rel="stylesheet" href="../pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css"  media="print" onload="this.media='all'"><link rel="stylesheet" href="../pluginsSrc/@fancyapps/ui/dist/fancybox.css"  media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: {"path":"../search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '天',
-  date_suffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: '../pluginsSrc/flickr-justified-gallery/dist/fjGallery.min.js',
-      css: '../pluginsSrc/flickr-justified-gallery/dist/fjGallery.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: true
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'Hexo中Buttefly主题Valine评论系统配置以及美化（七）',
-  isPost: true,
-  isHome: false,
-  isHighlightShrink: false,
-  isToc: true,
-  postUpdate: '2022-11-21 16:59:44'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Hexo中Buttefly主题Valine评论系统配置以及美化（七） | 偷掉月亮</title>
+  <meta name="author" content="MAIFY美菲">
+  <meta name="copyright" content="MAIFY美菲">
+  <meta name="format-detection" content="telephone=13361174893">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description"
+    content="Valine系统的设置原文链接：Hexo中Buttefly主题Valine评论系统配置以及美化（七） | 偷掉月亮 (moonshuo.cn) 大家好，我是阿硕，专注与后端，略懂前端的一个菜鸟程序猿，今天教大家Hexo中valine评论的设置。 介绍之所以选择valine是因为操作简单，而且页面的变化的美化我们都可以进行配置，简单功能比较强大，而且快速安全，不要后端 更改配置123456comme">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Hexo中Buttefly主题Valine评论系统配置以及美化（七）">
+  <meta property="og:url" content="https://moonshuo.cn/posts/51359.html">
+  <meta property="og:site_name" content="MAIFY美菲">
+  <meta property="og:description"
+    content="Valine系统的设置原文链接：Hexo中Buttefly主题Valine评论系统配置以及美化（七） | 偷掉月亮 (moonshuo.cn) 大家好，我是阿硕，专注与后端，略懂前端的一个菜鸟程序猿，今天教大家Hexo中valine评论的设置。 介绍之所以选择valine是因为操作简单，而且页面的变化的美化我们都可以进行配置，简单功能比较强大，而且快速安全，不要后端 更改配置123456comme">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:image" content="https://s1.ax1x.com/2023/02/01/pSBQJ7F.jpg">
+  <meta property="article:published_time" content="2022-11-06T11:44:33.209Z">
+  <meta property="article:modified_time" content="2022-11-21T08:59:44.982Z">
+  <meta property="article:author" content="MAIFY美菲">
+  <meta property="article:tag" content="Hexo">
+  <meta property="article:tag" content="Butterfly">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://s1.ax1x.com/2023/02/01/pSBQJ7F.jpg">
+  <link rel="shortcut icon " type="images/x-icon" href="http://www.jd.com/favicon.ico">
+  <link rel="canonical" href="https://moonshuo.cn/posts/51359">
+  <link rel="preconnect" href="//cdn.jsdelivr.net" />
+  <link rel="preconnect" href="//busuanzi.ibruce.info" />
+  <meta />
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css" media="print"
+    onload="this.media='all'">
+  <link rel="stylesheet" href="../pluginsSrc/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'">
+  <script>const GLOBAL_CONFIG = {
+      root: '/',
+      algolia: undefined,
+      localSearch: { "path": "../search.xml", "preload": false, "languages": { "hits_empty": "找不到您查询的内容：${query}" } },
+      translate: undefined,
+      noticeOutdate: undefined,
+      highlight: { "plugin": "highlighjs", "highlightCopy": true, "highlightLang": true, "highlightHeightLimit": 200 },
+      copy: {
+        success: '复制成功',
+        error: '复制错误',
+        noSupport: '浏览器不支持'
       },
-
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
+      relativeDate: {
+        homepage: false,
+        post: false
+      },
+      runtime: '天',
+      date_suffix: {
+        just: '刚刚',
+        min: '分钟前',
+        hour: '小时前',
+        day: '天前',
+        month: '个月前'
+      },
+      copyright: undefined,
+      lightbox: 'fancybox',
+      Snackbar: undefined,
+      source: {
+        justifiedGallery: {
+          js: '../pluginsSrc/flickr-justified-gallery/dist/fjGallery.min.js',
+          css: '../pluginsSrc/flickr-justified-gallery/dist/fjGallery.css'
         }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
+      },
+      isPhotoFigcaption: false,
+      islazyload: false,
+      isAnchor: true
+    }</script>
+  <script id="config-diff">var GLOBAL_CONFIG_SITE = {
+      title: 'Hexo中Buttefly主题Valine评论系统配置以及美化（七）',
+      isPost: true,
+      isHome: false,
+      isHighlightShrink: false,
+      isToc: true,
+      postUpdate: '2022-11-21 16:59:44'
+    }</script><noscript>
+    <style type="text/css">
+      #nav {
+        opacity: 1
       }
+
+      .justified-gallery img {
+        opacity: 1
+      }
+
+      #recent-posts time,
+      #post-meta time {
+        display: inline !important
+      }
+    </style>
+  </noscript>
+  <script>(win => {
+                               win.saveToLocal = {
+                                 set: function setWithExpiry(key, value, ttl) {
+                                   if (ttl === 0) return
+                                   const now = new Date()
+                                   const expiryDay = ttl * 86400000
+                                   const item = {
+                                     value: value,
+                                     expiry: now.getTime() + expiryDay,
+                                   }
+                                   localStorage.setItem(key, JSON.stringify(item))
+                                 },
+
+                                 get: function getWithExpiry(key) {
+                                   const itemStr = localStorage.getItem(key)
+
+                                   if (!itemStr) {
+                                     return undefined
+                                   }
+                                   const item = JSON.parse(itemStr)
+                                   const now = new Date()
+
+                                   if (now.getTime() > item.expiry) {
+                                     localStorage.removeItem(key)
+                                     return undefined
+                                   }
+                                   return item.value
+                                 }
+                               }
+
+                               win.getScript = url => new Promise((resolve, reject) => {
+                                 const script = document.createElement('script')
+                                 script.src = url
+                                 script.async = true
+                                 script.onerror = reject
+                                 script.onload = script.onreadystatechange = function () {
+                                   const loadState = this.readyState
+                                   if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                                   script.onload = script.onreadystatechange = null
+                                   resolve()
+                                 }
+                                 document.head.appendChild(script)
+                               })
+
+                               win.activateDarkMode = function () {
+                                 document.documentElement.setAttribute('data-theme', 'dark')
+                                 if (document.querySelector('meta[name="theme-color"]') !== null) {
+                                   document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+                                 }
+                               }
+                               win.activateLightMode = function () {
+                                 document.documentElement.setAttribute('data-theme', 'light')
+                                 if (document.querySelector('meta[name="theme-color"]') !== null) {
+                                   document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+                                 }
+                               }
+                               const t = saveToLocal.get('theme')
+
+                               if (t === 'dark') activateDarkMode()
+                               else if (t === 'light') activateLightMode()
+
+                               const asideStatus = saveToLocal.get('aside-status')
+                               if (asideStatus !== undefined) {
+                                 if (asideStatus === 'hide') {
+                                   document.documentElement.classList.add('hide-aside')
+                                 } else {
+                                   document.documentElement.classList.remove('hide-aside')
+                                 }
+                               }
+
+                               const detectApple = () => {
+                                 if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+                                   document.documentElement.classList.add('apple')
+                                 }
+                               }
+                               detectApple()
+                             })(window)</script>
+  <link rel="stylesheet" href="../css/iconfont.css">
+  <link rel="stylesheet" href="../css/myStyle.css">
+  <link rel="stylesheet" href="../css/fontSetting.css">
+  <link href="../css/toastr.css" rel="stylesheet">
+  <link href="../css/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/heoMainColor.css">
+  <link rel="stylesheet" type="text/css" href="../css/poem.css"><svg aria-hidden="true"
+    style="position:absolute; overflow:hidden; width:0; height:0">
+    <symbol id="icon-sun" viewBox="0 0 1024 1024">
+      <path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z"
+        fill="#FFD878" p-id="8420"></path>
+      <path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path>
+      <path
+        d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z"
+        fill="#4D5152" p-id="8422"></path>
+      <path
+        d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z"
+        fill="#4D5152" p-id="8423"></path>
+    </symbol>
+    <symbol id="icon-moon" viewBox="0 0 1024 1024">
+      <path
+        d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z"
+        fill="#FFB531" p-id="11345"></path>
+      <path
+        d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z"
+        fill="#030835" p-id="11346"></path>
+    </symbol>
+  </svg><!-- hexo injector head_end start -->
+  <link rel="stylesheet"
+    href="../../cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css" />
+  <style>
+    #recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap>.tags:before {
+      content: "\A";
+      white-space: pre;
     }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
-    
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
-    
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
+
+    #recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap>.tags>.article-meta__separator {
+      display: none
     }
-    detectApple()
-    })(window)</script><link rel="stylesheet" href="../css/iconfont.css" ><link rel="stylesheet" href="../css/myStyle.css" ><link rel="stylesheet" href="../css/fontSetting.css" ><link href="../css/toastr.css"  rel="stylesheet"><link href="../css/swiper-bundle.min.css"  rel="stylesheet"><link rel="stylesheet" type="text/css" href="../css/heoMainColor.css" ><link rel="stylesheet" type="text/css" href="../css/poem.css" ><svg aria-hidden="true" style="position:absolute; overflow:hidden; width:0; height:0"><symbol id="icon-sun" viewBox="0 0 1024 1024"><path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path><path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path><path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path><path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path></symbol><symbol id="icon-moon" viewBox="0 0 1024 1024"><path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path><path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path></symbol></svg><!-- hexo injector head_end start --><link rel="stylesheet" href="../../cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css" />
-<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
-  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="../img/avatar.gif"  onerror="onerror=null;src='../img/404.jpg'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="../archives/index.htm" ><div class="headline">文章</div><div class="length-num">14</div></a><a href="../tags/index.htm" ><div class="headline">标签</div><div class="length-num">2</div></a><a href="../categories/index.htm" ><div class="headline">分类</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="../index.htm" ><i class="fa-fw iconfont icon-shouye"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="../archives/index.htm" ><i class="fa-fw iconfont icon-riqi"></i><span> 时间线</span></a></div><div class="menus_item"><a class="site-page" href="../tags/index.htm" ><i class="fa-fw iconfont icon-biaoqian"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="../categories/index.htm" ><i class="fa-fw iconfont icon-fenlei21"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-xiuxian"></i><span> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="javascript:if(confirm('https://music.163.com/'))window.location='https://music.163.com/'" ><i class="fa-fw iconfont icon-yinle"></i><span> 音乐</span></a></li><li><a class="site-page child" href="javascript:if(confirm('https://www.csdn.net/'))window.location='https://www.csdn.net/'" ><i class="fa-fw iconfont icon-shuji"></i><span> 书籍</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="../about/index.htm" ><i class="fa-fw iconfont icon-guanyuwomen"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s1.ax1x.com/2023/02/01/pSBQJ7F.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="../index.htm" >偷掉月亮</a></span><span id="tp-weather-widget"></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="../index.htm" ><i class="fa-fw iconfont icon-shouye"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="../archives/index.htm" ><i class="fa-fw iconfont icon-riqi"></i><span> 时间线</span></a></div><div class="menus_item"><a class="site-page" href="../tags/index.htm" ><i class="fa-fw iconfont icon-biaoqian"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="../categories/index.htm" ><i class="fa-fw iconfont icon-fenlei21"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-xiuxian"></i><span> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="javascript:if(confirm('https://music.163.com/'))window.location='https://music.163.com/'" ><i class="fa-fw iconfont icon-yinle"></i><span> 音乐</span></a></li><li><a class="site-page child" href="javascript:if(confirm('https://www.csdn.net/'))window.location='https://www.csdn.net/'" ><i class="fa-fw iconfont icon-shuji"></i><span> 书籍</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="../about/index.htm" ><i class="fa-fw iconfont icon-guanyuwomen"></i><span> 关于</span></a></div></div><center id="name-container"><a id="page-name" href="javascript:scrollToTop()">PAGE_NAME</a></center></div><div id="nav-right"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Hexo中Buttefly主题Valine评论系统配置以及美化（七）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-11-06T11:44:33.209Z" title="发表于 2022-11-06 19:44:33">2022-11-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-21T08:59:44.982Z" title="更新于 2022-11-21 16:59:44">2022-11-21</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="../categories/博客搭建/index.htm" >博客搭建</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Hexo中Buttefly主题Valine评论系统配置以及美化（七）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Valine系统的设置"><a href="#Valine系统的设置" class="headerlink" title="Valine系统的设置"></a>Valine系统的设置</h1><p>原文链接：<a href="51359.html" >Hexo中Buttefly主题Valine评论系统配置以及美化（七） | 偷掉月亮 (moonshuo.cn)</a></p>
-<p>大家好，我是阿硕，专注与后端，略懂前端的一个菜鸟程序猿，今天教大家Hexo中valine评论的设置。</p>
-<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>之所以选择valine是因为操作简单，而且页面的变化的美化我们都可以进行配置，简单功能比较强大，而且快速安全，不要后端</p>
-<h2 id="更改配置"><a href="#更改配置" class="headerlink" title="更改配置"></a>更改配置</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">comments:</span><br><span class="line">  use: Valine #,Disqus # 可实现单评论、双评论(最多两个)</span><br><span class="line">  text: true # 是否显示评论服务商的名字</span><br><span class="line">  lazyload: true # 是否为评论开启lazyload，开启后，只有滚动到评论位置时才会加载评论所需要的资源（开启lazyload后，评论数将不显示）</span><br><span class="line">  count: true # 是否在文章顶部显示评论数，livere、Giscus 和 utterances 不支持评论数显示</span><br><span class="line">  card_post_count: false # 是否在首页文章卡片显示评论数，gitalk、livere 、Giscus 和 utterances 不支持评论数显示</span><br></pre></td></tr></table></figure>
-<h1 id="Valine使用"><a href="#Valine使用" class="headerlink" title="Valine使用"></a>Valine使用</h1><h2 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h2><font color='red'>如果你的域名备案了，建议选择国内的节点，这样我们操作比较方便，但是如果没有备案，我们选择国际版</font>
+  </style>
+  <!-- hexo injector head_end end -->
+  <meta name="generator" content="Hexo 6.3.0">
+</head>
 
-<p><a target="_blank" rel="noopener" href="javascript:if(confirm('https://www.leancloud.cn/'))window.location='https://www.leancloud.cn/'" >LeanCloud官网</a></p>
-<ol>
-<li>创建 Valine 应用，名称任意</li>
-<li>进入对应的应用，点击 <code>设置 -&gt; 应用 凭证，获取</code>AppID<code>和</code>AppKey`</li>
-<li>在butterfly应用中进行相关的配置</li>
-</ol>
-<p><img src="../images/202211062016721.png"  alt="image-20221106201611654"></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"># valine</span><br><span class="line"># https://valine.js.org</span><br><span class="line">valine:</span><br><span class="line">  appId: </span><br><span class="line">  appKey: </span><br><span class="line">  #查询下面的网站，选择评论的适合出现的图像 https://valine.js.org/#/avatar</span><br><span class="line">  avatar: monsterid # gravatar style </span><br><span class="line">  #你的对应的服务器的地址，就在appid那一页的下面</span><br><span class="line">  serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)</span><br><span class="line">  #评论系统的背景</span><br><span class="line">  bg: # valine background</span><br><span class="line">  #是否允许游客评论</span><br><span class="line">  visitor: false</span><br><span class="line">  #评论区显示的文字</span><br><span class="line">  placeholder: 留下你的足迹<span class="built_in">o</span>(*￣▽￣*)ブ</span><br><span class="line">  #每一页最大的评论数量</span><br><span class="line">  pageSize: <span class="number">15</span></span><br><span class="line">  option:</span><br></pre></td></tr></table></figure>
-<p>如果大家想要更多的配置信息，那么打开下面的网站进行查看介绍 <a target="_blank" rel="noopener" href="javascript:if(confirm('https://valine.js.org/'))window.location='https://valine.js.org/'" >介绍 | Valine 一款快速、简洁且高效的无后端评论系统。</a></p>
-<p>现在我们重新构建系统，进行评论尝试</p>
-<p><img src="../images/202211092036774.png"  alt="img"></p>
-<p><img src="../images/202211092036239.png"  alt="img"></p>
-<h2 id="绑定域名邮件通知"><a href="#绑定域名邮件通知" class="headerlink" title="绑定域名邮件通知"></a>绑定域名邮件通知</h2><p>云引擎—-设置—-访问域名</p>
-<p>这里绑定我们的二级域名，我设置的是valine开头</p>
-<p><img src="../images/202211062038090.png"  alt="image-20221106203833047"></p>
-<p>到我们的域名DNS解析器中进行解析，等待解析结束，显示成功的信息，<font color='red'>这里由于博主已经将域名备案，所以会首先检查备案信息，而如果选择的国际版，是不需要验证备案信息的，这个时间可能比较长，现在我们继续下一步</font></p>
-<p><img src="../images/202211062050128.png"  alt="image-20221106205005083"></p>
-<p><img src="../images/202211081828578.png"  alt="image-20221108182818483"></p>
-<h2 id="自定义环境变量"><a href="#自定义环境变量" class="headerlink" title="自定义环境变量"></a>自定义环境变量</h2><p>云引擎<code>--&gt;</code>设置<code>--&gt;</code>添加自定义环境变量</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>变量名称</th>
-<th>示例</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>SITE_NAME</td>
-<td>MAIFY美菲</td>
-<td>网站名称</td>
-</tr>
-<tr>
-<td>SITE_URL</td>
-<td>moonshuo.cn</td>
-<td>网站地址</td>
-</tr>
-<tr>
-<td>SMTP_USER</td>
-<td>zss200101@qq.com</td>
-<td>邮箱名称</td>
-</tr>
-<tr>
-<td>SMTP_PASS</td>
-<td>123456789</td>
-<td>邮箱SMTP验证码，可以自行搜索如何获取，后续会使用到</td>
-</tr>
-<tr>
-<td>SMTP_SERVICE</td>
-<td>QQ</td>
-<td>邮箱的服务商，便于邮件消息的分发</td>
-</tr>
-<tr>
-<td>SENDER_NAME</td>
-<td>MAIFY美菲</td>
-<td>寄件人的名称，我们后续发送短息的时候的名称</td>
-</tr>
-<tr>
-<td>TEMPLATE_NAME</td>
-<td>rainbow</td>
-<td>设置提醒邮件的主题（邮件的主题，美化的时候会说到）</td>
-</tr>
-<tr>
-<td>ADMIN_URL</td>
-<td>（注意要与你上面的绑定域名相同，我这里备案了，所以可以进行自定义）</td>
-<td>后台管理的地址，管理评论，同时用于唤醒服务器</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>云引擎<code>–&gt;</code>部署<code>–&gt;</code>部署项目<code>–&gt;</code>Git部署<code>–&gt;</code>配置Git<code>–&gt;</code>填写下方地址<code>–&gt;</code>保存<code>–&gt;</code>生产环境<code>–&gt;</code>部署</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//github.com/DesertsP/Valine-Admin.git</span></span><br></pre></td></tr></table></figure>
-<p>注意在我们部署的时候，选择的分支，旧的项目的是master，而GitHub新的位main，如果帮你使用别的系统，注意分支的名字</p>
-<p><img src="../images/202211062113507.png"  alt="image-20221106211312460"></p>
-<h2 id="解决服务器休眠问题"><a href="#解决服务器休眠问题" class="headerlink" title="解决服务器休眠问题"></a>解决服务器休眠问题</h2><p>由于我们选择的是免费的服务，默认是晚间关闭的，但是我们需要定时唤醒服务，以继续我们的评论的支撑</p>
-<p>找到定时任务—创建定时任务 </p>
-<ol>
-<li>定时检查24小时内漏发的邮件通知，生产环境选择<code>resend_mails</code>选择<code>0 59 7 * * *</code>，表示每天早 8 点检查过去 24 小时内漏发的通知邮件并补发</li>
-<li>选择 self-wake 云函数，Cron 表达式为 <code>0 0/20 7-23 * * ?</code>，表示每天早 7 点到晚 23:59 点每隔 20 分钟访问云引擎，<code>ADMIN_URL</code> 环境变量务必设置正确</li>
-</ol>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>大家注意在测试的时候要注意我们的云引擎是否处于休眠状态，如果处于休眠状态，那么我们的评论是不会发送的</p>
-<p><img src="../images/202211081842964.png"  alt="image-20221108184230934"></p>
-<h2 id="设置安全域名"><a href="#设置安全域名" class="headerlink" title="设置安全域名"></a>设置安全域名</h2><p>安全域名是限制那些网站可以是引用我们的评论的，虽然一般情况下不会泄露，但是这里设置上还是比较安全</p>
-<p>设置—&gt;安全中心—&gt;web安全域名</p>
-<p><img src="../images/202211081849548.png"  alt="image-20221108184956518"></p>
-<h1 id="评论系统的登录"><a href="#评论系统的登录" class="headerlink" title="评论系统的登录"></a>评论系统的登录</h1><p>上述布置完成之后，我们的整体已经完成了，但是我们想要更好的管理我们的评论，那么现在我们需要开启后台管理系统</p>
-<p>首先打开我们的设置的二级域名，比如博主的就是<a target="_blank" rel="noopener" href="javascript:if(confirm('https://valine.moonshuo.cn，也就是我们刚刚在设置的时候的域名，那么现在登录密码是什么，现在我们打开https/posts/://绑定的域名/sign-up进行注册，注册完毕即可登录'))window.location='https://valine.moonshuo.cn，也就是我们刚刚在设置的时候的域名，那么现在登录密码是什么，现在我们打开https/posts/://绑定的域名/sign-up进行注册，注册完毕即可登录'" >https://valine.moonshuo.cn，也就是我们刚刚在设置的时候的域名，那么现在登录密码是什么，现在我们打开https://绑定的域名/sign-up进行注册，注册完毕即可登录</a></p>
-<p><img src="../images/202211081907072.png"  alt="image-20221108190740036"></p>
-<p>有点简陋😀</p>
-<p><img src="../images/202211081910336.png"  alt="image-20221108191001308"></p>
-<h1 id="评论界面的美化"><a href="#评论界面的美化" class="headerlink" title="评论界面的美化"></a>评论界面的美化</h1><p>现在的美化基于valine1.5.1</p>
-<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p>现在我们使用的valine评论用的是原作者发布在网络上的，而我们无法直接对源码进行更改，所以我们需要下载下来进行相关配置，那么现在我们进行下载，下面以谷歌浏览器为例子</p>
-<p>鼠标右击，点击检查找到网络，打开这个网址，我们会发现进入到了一个js页面，右键另存为到/js文件夹中</p>
-<p><img src="../images/202211081957034.png"  alt="image-20221108195732954"></p>
-<p><img src="../images/202211081959730.png"  alt="image-20221108195916696"></p>
-<p>现在进入到butterfly配置文件，搜索option，找到valine，这个时候我们发现这个js文件已经是我们自己的文件了，而且还可以享受到我们自己的cdn加速效果，也不用担心原来的链接挂掉</p>
-<p><img src="../images/202211082000895.png"  alt="image-20221108200011649"></p>
-<p><img src="../images/202211082001016.png"  alt="image-20221108200145980"></p>
-<h2 id="添加背景图片"><a href="#添加背景图片" class="headerlink" title="添加背景图片"></a>添加背景图片</h2><p>有的小伙伴可能会问不是配置中可以直接添加吗？？？<font color='red'>但是比较奇怪的是博主这里出现了兼容性错误，所以放弃那个更改在这里进行添加</font></p>
-<p>现在我们定义一个myStyle.css放在下面的目录中</p>
-<p><img src="../images/202211081928319.png"  alt="image-20221108192808273"></p>
-<p>现在我们在主题文件中引入这个文件</p>
-<p><img src="../images/202211081929813.png"  alt="image-20221108192917782"></p>
-<p>在css中写入下面的代码，这里作者的图片放到了css同级目录下的img下，大家也可以直接放超链接,<font color='red'>建议大家放动图，这样有感觉吧</font></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#veditor</span> &#123;</span><br><span class="line">	<span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">../img/valineBg.jpg</span>);</span><br><span class="line">	<span class="attribute">background-size</span>: contain;</span><br><span class="line">	<span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">	<span class="attribute">background-position</span>: right;</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0</span>);</span><br><span class="line">	<span class="attribute">resize</span>: vertical</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>效果</p>
-<p><img src="../images/202211081948080.gif"  alt="1"></p>
-<p>下面的这一行代码，当鼠标聚焦的时候，背景图消失，大家可以选择使用</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#veditor</span><span class="selector-pseudo">:focus</span>&#123;</span><br><span class="line">	<span class="attribute">background-position</span>-y: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">transition</span>: all <span class="number">0.2s</span> ease-in-out <span class="number">0s</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="增加博主小伙伴标识"><a href="#增加博主小伙伴标识" class="headerlink" title="增加博主小伙伴标识"></a>增加博主小伙伴标识</h2><p>而现在的这个功能需要我们使用魔改的valine文件，那么还是原来的办法，打开下列的网址，替换原来的js文件</p>
-<p><a target="_blank" rel="noopener" href="javascript:if(confirm('https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js'))window.location='https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js'" >https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js</a></p>
-<p><img src="../images/202211082024241.png"  alt="image-20221108202429201"></p>
-<p>打开下面的路径</p>
-<p>…\themes\butterfly\layout\includes\third-party\comments\valine.pug,在里面更改如下的代码</p>
-<p><img src="../images/202211082026682.png"  alt="image-20221108202602633"></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">master: <span class="string">&#x27;ef2aca03b77e6934e3a45ccc751c5e91&#x27;</span>,   //博主邮箱md5加密<span class="number">32</span>位小写</span><br><span class="line">        tagMeta: [<span class="string">&quot;博主&quot;</span>,<span class="string">&quot;小伙伴&quot;</span>,<span class="string">&quot;访客&quot;</span>],     //标识字段名</span><br><span class="line">        friends:  [],  //小伙伴邮箱Md5</span><br></pre></td></tr></table></figure>
-<font color='red'>注意标识是通过邮箱进行验证的，那么现在我们评论的时候输入邮箱才会显示我们是博主</font>
+<body>
+  <div id="web_bg"></div>
+  <div id="sidebar">
+    <div id="menu-mask"></div>
+    <div id="sidebar-menus">
+      <div class="avatar-img is-center"><img src="../img/avatar.gif" onerror="onerror=null;src='../img/404.jpg'"
+          alt="avatar" /></div>
+      <div class="sidebar-site-data site-data is-center"><a href="../archives/index.htm">
+          <div class="headline">文章</div>
+          <div class="length-num">14</div>
+        </a><a href="../tags/index.htm">
+          <div class="headline">标签</div>
+          <div class="length-num">2</div>
+        </a><a href="../categories/index.htm">
+          <div class="headline">分类</div>
+          <div class="length-num">1</div>
+        </a></div>
+      <hr />
+      <div class="menus_items">
+        <div class="menus_item"><a class="site-page" href="../index.htm"><i
+              class="fa-fw iconfont icon-shouye"></i><span> 首页</span></a></div>
+        <div class="menus_item"><a class="site-page" href="../archives/index.htm"><i
+              class="fa-fw iconfont icon-riqi"></i><span> 时间线</span></a></div>
+        <div class="menus_item"><a class="site-page" href="../tags/index.htm"><i
+              class="fa-fw iconfont icon-biaoqian"></i><span> 标签</span></a></div>
+        <div class="menus_item"><a class="site-page" href="../categories/index.htm"><i
+              class="fa-fw iconfont icon-fenlei21"></i><span> 分类</span></a></div>
+        <div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i
+              class="fa-fw iconfont icon-xiuxian"></i><span> 休闲</span><i class="fas fa-chevron-down"></i></a>
+          <ul class="menus_item_child">
+            <li><a class="site-page child"
+                href="javascript:if(confirm('https://music.163.com/'))window.location='https://music.163.com/'"><i
+                  class="fa-fw iconfont icon-yinle"></i><span> 音乐</span></a></li>
+            <li><a class="site-page child"
+                href="javascript:if(confirm('https://www.csdn.net/'))window.location='https://www.csdn.net/'"><i
+                  class="fa-fw iconfont icon-shuji"></i><span> 书籍</span></a></li>
+          </ul>
+        </div>
+        <div class="menus_item"><a class="site-page" href="../about/index.htm"><i
+              class="fa-fw iconfont icon-guanyuwomen"></i><span> 关于</span></a></div>
+      </div>
+    </div>
+  </div>
+  <div class="post" id="body-wrap">
+    <header class="post-bg" id="page-header"
+      style="background-image: url('https://s1.ax1x.com/2023/02/01/pSBQJ7F.jpg')">
+      <nav id="nav"><span id="blog_name"><a id="site-name" href="../index.htm">偷掉月亮</a></span><span
+          id="tp-weather-widget"></span>
+        <div id="menus">
+          <div class="menus_items">
+            <div class="menus_item"><a class="site-page" href="../index.htm"><i
+                  class="fa-fw iconfont icon-shouye"></i><span> 首页</span></a></div>
+            <div class="menus_item"><a class="site-page" href="../archives/index.htm"><i
+                  class="fa-fw iconfont icon-riqi"></i><span> 时间线</span></a></div>
+            <div class="menus_item"><a class="site-page" href="../tags/index.htm"><i
+                  class="fa-fw iconfont icon-biaoqian"></i><span> 标签</span></a></div>
+            <div class="menus_item"><a class="site-page" href="../categories/index.htm"><i
+                  class="fa-fw iconfont icon-fenlei21"></i><span> 分类</span></a></div>
+            <div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i
+                  class="fa-fw iconfont icon-xiuxian"></i><span> 休闲</span><i class="fas fa-chevron-down"></i></a>
+              <ul class="menus_item_child">
+                <li><a class="site-page child"
+                    href="javascript:if(confirm('https://music.163.com/'))window.location='https://music.163.com/'"><i
+                      class="fa-fw iconfont icon-yinle"></i><span> 音乐</span></a></li>
+                <li><a class="site-page child"
+                    href="javascript:if(confirm('https://www.csdn.net/'))window.location='https://www.csdn.net/'"><i
+                      class="fa-fw iconfont icon-shuji"></i><span> 书籍</span></a></li>
+              </ul>
+            </div>
+            <div class="menus_item"><a class="site-page" href="../about/index.htm"><i
+                  class="fa-fw iconfont icon-guanyuwomen"></i><span> 关于</span></a></div>
+          </div>
+          <center id="name-container"><a id="page-name" href="javascript:scrollToTop()"></a></center>
+        </div>
+        <div id="nav-right">
+          <div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span>
+                搜索</span></a></div>
+          <div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div>
+        </div>
+      </nav>
+      <div id="post-info">
+        <h1 class="post-title">Hexo中Buttefly主题Valine评论系统配置以及美化（七）</h1>
+        <div id="post-meta">
+          <div class="meta-firstline"><span class="post-meta-date"><i
+                class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time
+                class="post-meta-date-created" datetime="2022-11-06T11:44:33.209Z"
+                title="发表于 2022-11-06 19:44:33">2022-11-06</time><span class="post-meta-separator">|</span><i
+                class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time
+                class="post-meta-date-updated" datetime="2022-11-21T08:59:44.982Z"
+                title="更新于 2022-11-21 16:59:44">2022-11-21</time></span><span class="post-meta-categories"><span
+                class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a
+                class="post-meta-categories" href="../categories/博客搭建/index.htm">博客搭建</a></span></div>
+          <div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i
+                class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span
+                class="word-count">2.4k</span><span class="post-meta-separator">|</span><i
+                class="far fa-clock fa-fw post-meta-icon"></i><span
+                class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span
+              class="post-meta-separator">|</span><span class="post-meta-pv-cv" id=""
+              data-flag-title="Hexo中Buttefly主题Valine评论系统配置以及美化（七）"><i class="far fa-eye fa-fw post-meta-icon"></i><span
+                class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i
+                  class="fa-solid fa-spinner fa-spin"></i></span></span></div>
+        </div>
+      </div>
+    </header>
+    <main class="layout" id="content-inner">
+      <div id="post">
+        <article class="post-content" id="article-container">
+          <h1 id="Valine系统的设置"><a href="#Valine系统的设置" class="headerlink" title="Valine系统的设置"></a>Valine系统的设置</h1>
+          <p>原文链接：<a href="51359.html">Hexo中Buttefly主题Valine评论系统配置以及美化（七） | 偷掉月亮 (moonshuo.cn)</a></p>
+          <p>大家好，我是阿硕，专注与后端，略懂前端的一个菜鸟程序猿，今天教大家Hexo中valine评论的设置。</p>
+          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2>
+          <p>之所以选择valine是因为操作简单，而且页面的变化的美化我们都可以进行配置，简单功能比较强大，而且快速安全，不要后端</p>
+          <h2 id="更改配置"><a href="#更改配置" class="headerlink" title="更改配置"></a>更改配置</h2>
+          <figure class="highlight css">
+            <table>
+              <tr>
+                <td class="gutter">
+                  <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre>
+                </td>
+                <td class="code">
+                  <pre><span class="line">comments:</span><br><span class="line">  use: Valine #,Disqus # 可实现单评论、双评论(最多两个)</span><br><span class="line">  text: true # 是否显示评论服务商的名字</span><br><span class="line">  lazyload: true # 是否为评论开启lazyload，开启后，只有滚动到评论位置时才会加载评论所需要的资源（开启lazyload后，评论数将不显示）</span><br><span class="line">  count: true # 是否在文章顶部显示评论数，livere、Giscus 和 utterances 不支持评论数显示</span><br><span class="line">  card_post_count: false # 是否在首页文章卡片显示评论数，gitalk、livere 、Giscus 和 utterances 不支持评论数显示</span><br></pre>
+                </td>
+              </tr>
+            </table>
+          </figure>
+          <h1 id="Valine使用"><a href="#Valine使用" class="headerlink" title="Valine使用"></a>Valine使用</h1>
+          <h2 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h2>
+          <font color='red'>如果你的域名备案了，建议选择国内的节点，这样我们操作比较方便，但是如果没有备案，我们选择国际版</font>
 
-<h1 id="Leancloud流控问题解决"><a href="#Leancloud流控问题解决" class="headerlink" title="Leancloud流控问题解决"></a>Leancloud流控问题解决</h1><font color='red'>此问题尚未解决，等待后续更新</font>
+          <p><a target="_blank" rel="noopener"
+              href="javascript:if(confirm('https://www.leancloud.cn/'))window.location='https://www.leancloud.cn/'">LeanCloud官网</a>
+          </p>
+          <ol>
+            <li>创建 Valine 应用，名称任意</li>
+            <li>进入对应的应用，点击 <code>设置 -&gt; 应用 凭证，获取</code>AppID<code>和</code>AppKey`</li>
+            <li>在butterfly应用中进行相关的配置</li>
+          </ol>
+          <p><img src="../images/202211062016721.png" alt="image-20221106201611654"></p>
+          <figure class="highlight css">
+            <table>
+              <tr>
+                <td class="gutter">
+                  <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre>
+                </td>
+                <td class="code">
+                  <pre><span class="line"># valine</span><br><span class="line"># https://valine.js.org</span><br><span class="line">valine:</span><br><span class="line">  appId: </span><br><span class="line">  appKey: </span><br><span class="line">  #查询下面的网站，选择评论的适合出现的图像 https://valine.js.org/#/avatar</span><br><span class="line">  avatar: monsterid # gravatar style </span><br><span class="line">  #你的对应的服务器的地址，就在appid那一页的下面</span><br><span class="line">  serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)</span><br><span class="line">  #评论系统的背景</span><br><span class="line">  bg: # valine background</span><br><span class="line">  #是否允许游客评论</span><br><span class="line">  visitor: false</span><br><span class="line">  #评论区显示的文字</span><br><span class="line">  placeholder: 留下你的足迹<span class="built_in">o</span>(*￣▽￣*)ブ</span><br><span class="line">  #每一页最大的评论数量</span><br><span class="line">  pageSize: <span class="number">15</span></span><br><span class="line">  option:</span><br></pre>
+                </td>
+              </tr>
+            </table>
+          </figure>
+          <p>如果大家想要更多的配置信息，那么打开下面的网站进行查看介绍 <a target="_blank" rel="noopener"
+              href="javascript:if(confirm('https://valine.js.org/'))window.location='https://valine.js.org/'">介绍 |
+              Valine 一款快速、简洁且高效的无后端评论系统。</a></p>
+          <p>现在我们重新构建系统，进行评论尝试</p>
+          <p><img src="../images/202211092036774.png" alt="img"></p>
+          <p><img src="../images/202211092036239.png" alt="img"></p>
+          <h2 id="绑定域名邮件通知"><a href="#绑定域名邮件通知" class="headerlink" title="绑定域名邮件通知"></a>绑定域名邮件通知</h2>
+          <p>云引擎—-设置—-访问域名</p>
+          <p>这里绑定我们的二级域名，我设置的是valine开头</p>
+          <p><img src="../images/202211062038090.png" alt="image-20221106203833047"></p>
+          <p>到我们的域名DNS解析器中进行解析，等待解析结束，显示成功的信息，<font color='red'>
+              这里由于博主已经将域名备案，所以会首先检查备案信息，而如果选择的国际版，是不需要验证备案信息的，这个时间可能比较长，现在我们继续下一步</font>
+          </p>
+          <p><img src="../images/202211062050128.png" alt="image-20221106205005083"></p>
+          <p><img src="../images/202211081828578.png" alt="image-20221108182818483"></p>
+          <h2 id="自定义环境变量"><a href="#自定义环境变量" class="headerlink" title="自定义环境变量"></a>自定义环境变量</h2>
+          <p>云引擎<code>--&gt;</code>设置<code>--&gt;</code>添加自定义环境变量</p>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>变量名称</th>
+                  <th>示例</th>
+                  <th>说明</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>SITE_NAME</td>
+                  <td>MAIFY美菲</td>
+                  <td>网站名称</td>
+                </tr>
+                <tr>
+                  <td>SITE_URL</td>
+                  <td>moonshuo.cn</td>
+                  <td>网站地址</td>
+                </tr>
+                <tr>
+                  <td>SMTP_USER</td>
+                  <td>zss200101@qq.com</td>
+                  <td>邮箱名称</td>
+                </tr>
+                <tr>
+                  <td>SMTP_PASS</td>
+                  <td>123456789</td>
+                  <td>邮箱SMTP验证码，可以自行搜索如何获取，后续会使用到</td>
+                </tr>
+                <tr>
+                  <td>SMTP_SERVICE</td>
+                  <td>QQ</td>
+                  <td>邮箱的服务商，便于邮件消息的分发</td>
+                </tr>
+                <tr>
+                  <td>SENDER_NAME</td>
+                  <td>MAIFY美菲</td>
+                  <td>寄件人的名称，我们后续发送短息的时候的名称</td>
+                </tr>
+                <tr>
+                  <td>TEMPLATE_NAME</td>
+                  <td>rainbow</td>
+                  <td>设置提醒邮件的主题（邮件的主题，美化的时候会说到）</td>
+                </tr>
+                <tr>
+                  <td>ADMIN_URL</td>
+                  <td>（注意要与你上面的绑定域名相同，我这里备案了，所以可以进行自定义）</td>
+                  <td>后台管理的地址，管理评论，同时用于唤醒服务器</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2>
+          <p>
+            云引擎<code>–&gt;</code>部署<code>–&gt;</code>部署项目<code>–&gt;</code>Git部署<code>–&gt;</code>配置Git<code>–&gt;</code>填写下方地址<code>–&gt;</code>保存<code>–&gt;</code>生产环境<code>–&gt;</code>部署
+          </p>
+          <figure class="highlight java">
+            <table>
+              <tr>
+                <td class="gutter">
+                  <pre><span class="line">1</span><br></pre>
+                </td>
+                <td class="code">
+                  <pre><span class="line">https:<span class="comment">//github.com/DesertsP/Valine-Admin.git</span></span><br></pre>
+                </td>
+              </tr>
+            </table>
+          </figure>
+          <p>注意在我们部署的时候，选择的分支，旧的项目的是master，而GitHub新的位main，如果帮你使用别的系统，注意分支的名字</p>
+          <p><img src="../images/202211062113507.png" alt="image-20221106211312460"></p>
+          <h2 id="解决服务器休眠问题"><a href="#解决服务器休眠问题" class="headerlink" title="解决服务器休眠问题"></a>解决服务器休眠问题</h2>
+          <p>由于我们选择的是免费的服务，默认是晚间关闭的，但是我们需要定时唤醒服务，以继续我们的评论的支撑</p>
+          <p>找到定时任务—创建定时任务 </p>
+          <ol>
+            <li>定时检查24小时内漏发的邮件通知，生产环境选择<code>resend_mails</code>选择<code>0 59 7 * * *</code>，表示每天早 8 点检查过去 24
+              小时内漏发的通知邮件并补发</li>
+            <li>选择 self-wake 云函数，Cron 表达式为 <code>0 0/20 7-23 * * ?</code>，表示每天早 7 点到晚 23:59 点每隔 20
+              分钟访问云引擎，<code>ADMIN_URL</code> 环境变量务必设置正确</li>
+          </ol>
+          <h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2>
+          <p>大家注意在测试的时候要注意我们的云引擎是否处于休眠状态，如果处于休眠状态，那么我们的评论是不会发送的</p>
+          <p><img src="../images/202211081842964.png" alt="image-20221108184230934"></p>
+          <h2 id="设置安全域名"><a href="#设置安全域名" class="headerlink" title="设置安全域名"></a>设置安全域名</h2>
+          <p>安全域名是限制那些网站可以是引用我们的评论的，虽然一般情况下不会泄露，但是这里设置上还是比较安全</p>
+          <p>设置—&gt;安全中心—&gt;web安全域名</p>
+          <p><img src="../images/202211081849548.png" alt="image-20221108184956518"></p>
+          <h1 id="评论系统的登录"><a href="#评论系统的登录" class="headerlink" title="评论系统的登录"></a>评论系统的登录</h1>
+          <p>上述布置完成之后，我们的整体已经完成了，但是我们想要更好的管理我们的评论，那么现在我们需要开启后台管理系统</p>
+          <p>首先打开我们的设置的二级域名，比如博主的就是<a target="_blank" rel="noopener"
+              href="javascript:if(confirm('https://valine.moonshuo.cn，也就是我们刚刚在设置的时候的域名，那么现在登录密码是什么，现在我们打开https/posts/://绑定的域名/sign-up进行注册，注册完毕即可登录'))window.location='https://valine.moonshuo.cn，也就是我们刚刚在设置的时候的域名，那么现在登录密码是什么，现在我们打开https/posts/://绑定的域名/sign-up进行注册，注册完毕即可登录'">https://valine.moonshuo.cn，也就是我们刚刚在设置的时候的域名，那么现在登录密码是什么，现在我们打开https://绑定的域名/sign-up进行注册，注册完毕即可登录</a>
+          </p>
+          <p><img src="../images/202211081907072.png" alt="image-20221108190740036"></p>
+          <p>有点简陋😀</p>
+          <p><img src="../images/202211081910336.png" alt="image-20221108191001308"></p>
+          <h1 id="评论界面的美化"><a href="#评论界面的美化" class="headerlink" title="评论界面的美化"></a>评论界面的美化</h1>
+          <p>现在的美化基于valine1.5.1</p>
+          <h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2>
+          <p>现在我们使用的valine评论用的是原作者发布在网络上的，而我们无法直接对源码进行更改，所以我们需要下载下来进行相关配置，那么现在我们进行下载，下面以谷歌浏览器为例子</p>
+          <p>鼠标右击，点击检查找到网络，打开这个网址，我们会发现进入到了一个js页面，右键另存为到/js文件夹中</p>
+          <p><img src="../images/202211081957034.png" alt="image-20221108195732954"></p>
+          <p><img src="../images/202211081959730.png" alt="image-20221108195916696"></p>
+          <p>现在进入到butterfly配置文件，搜索option，找到valine，这个时候我们发现这个js文件已经是我们自己的文件了，而且还可以享受到我们自己的cdn加速效果，也不用担心原来的链接挂掉</p>
+          <p><img src="../images/202211082000895.png" alt="image-20221108200011649"></p>
+          <p><img src="../images/202211082001016.png" alt="image-20221108200145980"></p>
+          <h2 id="添加背景图片"><a href="#添加背景图片" class="headerlink" title="添加背景图片"></a>添加背景图片</h2>
+          <p>有的小伙伴可能会问不是配置中可以直接添加吗？？？<font color='red'>但是比较奇怪的是博主这里出现了兼容性错误，所以放弃那个更改在这里进行添加</font>
+          </p>
+          <p>现在我们定义一个myStyle.css放在下面的目录中</p>
+          <p><img src="../images/202211081928319.png" alt="image-20221108192808273"></p>
+          <p>现在我们在主题文件中引入这个文件</p>
+          <p><img src="../images/202211081929813.png" alt="image-20221108192917782"></p>
+          <p>在css中写入下面的代码，这里作者的图片放到了css同级目录下的img下，大家也可以直接放超链接,<font color='red'>建议大家放动图，这样有感觉吧</font>
+          </p>
+          <figure class="highlight css">
+            <table>
+              <tr>
+                <td class="gutter">
+                  <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre>
+                </td>
+                <td class="code">
+                  <pre><span class="line"><span class="selector-id">#veditor</span> &#123;</span><br><span class="line">	<span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">../img/valineBg.jpg</span>);</span><br><span class="line">	<span class="attribute">background-size</span>: contain;</span><br><span class="line">	<span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">	<span class="attribute">background-position</span>: right;</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0</span>);</span><br><span class="line">	<span class="attribute">resize</span>: vertical</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre>
+                </td>
+              </tr>
+            </table>
+          </figure>
+          <p>效果</p>
+          <p><img src="../images/202211081948080.gif" alt="1"></p>
+          <p>下面的这一行代码，当鼠标聚焦的时候，背景图消失，大家可以选择使用</p>
+          <figure class="highlight css">
+            <table>
+              <tr>
+                <td class="gutter">
+                  <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre>
+                </td>
+                <td class="code">
+                  <pre><span class="line"><span class="selector-id">#veditor</span><span class="selector-pseudo">:focus</span>&#123;</span><br><span class="line">	<span class="attribute">background-position</span>-y: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">transition</span>: all <span class="number">0.2s</span> ease-in-out <span class="number">0s</span>;</span><br><span class="line">&#125;</span><br></pre>
+                </td>
+              </tr>
+            </table>
+          </figure>
+          <h2 id="增加博主小伙伴标识"><a href="#增加博主小伙伴标识" class="headerlink" title="增加博主小伙伴标识"></a>增加博主小伙伴标识</h2>
+          <p>而现在的这个功能需要我们使用魔改的valine文件，那么还是原来的办法，打开下列的网址，替换原来的js文件</p>
+          <p><a target="_blank" rel="noopener"
+              href="javascript:if(confirm('https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js'))window.location='https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js'">https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js</a>
+          </p>
+          <p><img src="../images/202211082024241.png" alt="image-20221108202429201"></p>
+          <p>打开下面的路径</p>
+          <p>…\themes\butterfly\layout\includes\third-party\comments\valine.pug,在里面更改如下的代码</p>
+          <p><img src="../images/202211082026682.png" alt="image-20221108202602633"></p>
+          <figure class="highlight css">
+            <table>
+              <tr>
+                <td class="gutter">
+                  <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre>
+                </td>
+                <td class="code">
+                  <pre><span class="line">master: <span class="string">&#x27;ef2aca03b77e6934e3a45ccc751c5e91&#x27;</span>,   //博主邮箱md5加密<span class="number">32</span>位小写</span><br><span class="line">        tagMeta: [<span class="string">&quot;博主&quot;</span>,<span class="string">&quot;小伙伴&quot;</span>,<span class="string">&quot;访客&quot;</span>],     //标识字段名</span><br><span class="line">        friends:  [],  //小伙伴邮箱Md5</span><br></pre>
+                </td>
+              </tr>
+            </table>
+          </figure>
+          <font color='red'>注意标识是通过邮箱进行验证的，那么现在我们评论的时候输入邮箱才会显示我们是博主</font>
 
-<p>今早上起来尝试一下评论，发现失效了，邮件功能不能正常的使用，查询了一下原因发现是因为同一时间执行的人数太多，而导致服务器唤醒失败，那么我们应该如何解决？？</p>
-<p><img src="../images/202211091416864.png"  alt="image-20221109141647786"></p>
-<p>在这里参考了这位博主的文章<a target="_blank" rel="noopener" href="javascript:if(confirm('https://cloud.tencent.com/developer/article/1628950'))window.location='https://cloud.tencent.com/developer/article/1628950'" >优雅解决LeanCloud流控问题 - 腾讯云开发者社区-腾讯云 (tencent.com)</a></p>
-<h2 id="设置Token"><a href="#设置Token" class="headerlink" title="设置Token"></a>设置Token</h2><p>登录github—setting—developer settings</p>
-<p><img src="../images/202211091430534.png"  alt="image-20221109143026494"></p>
-<p>名称设置为GITHUB_TOKEN，然后选择repo , admin:repo_hook , workflow这些选项，最终完成token</p>
-<h2 id="建立仓库"><a href="#建立仓库" class="headerlink" title="建立仓库"></a>建立仓库</h2><p>新建一个仓库，名称必须为GITHUB_TOKEN</p>
-<p><img src="../images/202211091435586.png"  alt="image-20221109143511554"></p>
-<p>接下来我们fork以下项目的代码</p>
-<p><a target="_blank" rel="noopener" href="javascript:if(confirm('https://github.com/AimTao/leancloud-self-wake'))window.location='https://github.com/AimTao/leancloud-self-wake'" >https://github.com/AimTao/leancloud-self-wake</a></p>
-<p>完毕之后，我们设置设置你的 <strong>评论后台网站的地址，并开启 Github Action</strong></p>
-<p><img src="../images/202211101021956.png"  alt="image-20221110102148817"></p>
-<p>而下面是你的valine管理地址</p>
-<p><img src="../images/202211101022169.png"  alt="image-20221110102249135"></p>
-<p>点击Action，如果是第一次点击I Under….，然后点击以下自己的右上角的star，首先手动触发一次</p>
-<p><img src="../images/202211101024472.png"  alt="image-20221110102459418"></p>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>在美化的过程中参考了许多大佬的代码，忘了记录了下来，这里说明一下，然后还有很多关于butterfly中valine的设置，比如每日一言，等等操作，鉴于访问速度的影响，这里就不再进行阐述，大家如果需要在评论区提醒一下，后续会在出教程</p>
-<font color='red'>还有一部分美化由于技术有线或者版本冲突问题，暂时没有写出来，我会等到解决在更新教程的，谢谢大家！！！</font>
+          <h1 id="Leancloud流控问题解决"><a href="#Leancloud流控问题解决" class="headerlink"
+              title="Leancloud流控问题解决"></a>Leancloud流控问题解决</h1>
+          <font color='red'>此问题尚未解决，等待后续更新</font>
+
+          <p>今早上起来尝试一下评论，发现失效了，邮件功能不能正常的使用，查询了一下原因发现是因为同一时间执行的人数太多，而导致服务器唤醒失败，那么我们应该如何解决？？</p>
+          <p><img src="../images/202211091416864.png" alt="image-20221109141647786"></p>
+          <p>在这里参考了这位博主的文章<a target="_blank" rel="noopener"
+              href="javascript:if(confirm('https://cloud.tencent.com/developer/article/1628950'))window.location='https://cloud.tencent.com/developer/article/1628950'">优雅解决LeanCloud流控问题
+              - 腾讯云开发者社区-腾讯云 (tencent.com)</a></p>
+          <h2 id="设置Token"><a href="#设置Token" class="headerlink" title="设置Token"></a>设置Token</h2>
+          <p>登录github—setting—developer settings</p>
+          <p><img src="../images/202211091430534.png" alt="image-20221109143026494"></p>
+          <p>名称设置为GITHUB_TOKEN，然后选择repo , admin:repo_hook , workflow这些选项，最终完成token</p>
+          <h2 id="建立仓库"><a href="#建立仓库" class="headerlink" title="建立仓库"></a>建立仓库</h2>
+          <p>新建一个仓库，名称必须为GITHUB_TOKEN</p>
+          <p><img src="../images/202211091435586.png" alt="image-20221109143511554"></p>
+          <p>接下来我们fork以下项目的代码</p>
+          <p><a target="_blank" rel="noopener"
+              href="javascript:if(confirm('https://github.com/AimTao/leancloud-self-wake'))window.location='https://github.com/AimTao/leancloud-self-wake'">https://github.com/AimTao/leancloud-self-wake</a>
+          </p>
+          <p>完毕之后，我们设置设置你的 <strong>评论后台网站的地址，并开启 Github Action</strong></p>
+          <p><img src="../images/202211101021956.png" alt="image-20221110102148817"></p>
+          <p>而下面是你的valine管理地址</p>
+          <p><img src="../images/202211101022169.png" alt="image-20221110102249135"></p>
+          <p>点击Action，如果是第一次点击I Under….，然后点击以下自己的右上角的star，首先手动触发一次</p>
+          <p><img src="../images/202211101024472.png" alt="image-20221110102459418"></p>
+          <h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1>
+          <p>
+            在美化的过程中参考了许多大佬的代码，忘了记录了下来，这里说明一下，然后还有很多关于butterfly中valine的设置，比如每日一言，等等操作，鉴于访问速度的影响，这里就不再进行阐述，大家如果需要在评论区提醒一下，后续会在出教程
+          </p>
+          <font color='red'>还有一部分美化由于技术有线或者版本冲突问题，暂时没有写出来，我会等到解决在更新教程的，谢谢大家！！！</font>
 
 
 
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="../index.htm" >MAIFY美菲</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="51359.html" >https://moonshuo.cn/posts/51359.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="javascript:if(confirm('https://creativecommons.org/licenses/by-nc-sa/4.0/'))window.location='https://creativecommons.org/licenses/by-nc-sa/4.0/'"  target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="../index.htm"  target="_blank">偷掉月亮</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="../tags/Hexo/index.htm" >Hexo</a><a class="post-meta__tags" href="../tags/Butterfly/index.htm" >Butterfly</a></div><div class="post_share"><div class="social-share" data-image="https://s1.ax1x.com/2023/02/01/pSBQJ7F.jpg" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="../pluginsSrc/butterfly-extsrc/sharejs/dist/css/share.min.css"  media="print" onload="this.media='all'"><script src="../pluginsSrc/butterfly-extsrc/sharejs/dist/js/social-share.min.js"  defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="1481.html" ><img class="prev-cover" src="../cover/9.jpg"  onerror="onerror=null;src='../img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Hexo中Buttefly主题美化进阶（八）</div></div></a></div><div class="next-post pull-right"><a href="37568.html" ><img class="next-cover" src="../cover/7.jpg"  onerror="onerror=null;src='../img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hexo中Buttefly主题配置美化（六）</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="../img/avatar.gif"  onerror="this.onerror=null;this.src='/img/404.jpg'" alt这里是美菲的小站"/></div><div class="author-info__name">MAIFY美菲</div><div class="author-info__description">这是我的博客网站</div></div><div class="card-info-data site-data is-center"><a href="../archives/index.htm" ><div class="headline">文章</div><div class="length-num">14</div></a><a href="../tags/index.htm" ><div class="headline">标签</div><div class="length-num">2</div></a><a href="../categories/index.htm" ><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:2410419801@qq.com" target="_blank" title="邮箱"><i class="iconfont icon-youxiang"></i></a><a class="social-icon" href="tencent://message/?uin=2410419801&amp;Site=Sambow&amp;Menu=yes" target="_blank" title="QQ"><i class="iconfont icon-QQ1"></i></a><a class="social-icon" href="javascript:if(confirm('https://www.zhihu.com/people/tou-diao-yue-liang-28'))window.location='https://www.zhihu.com/people/tou-diao-yue-liang-28'"  target="_blank" title="知乎"><i class="iconfont icon-shejiaotubiao-10"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Valine%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">Valine系统的设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%94%B9%E9%85%8D%E7%BD%AE"><span class="toc-number">1.2.</span> <span class="toc-text">更改配置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Valine%E4%BD%BF%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">Valine使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE"><span class="toc-number">2.1.</span> <span class="toc-text">基础配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D%E9%82%AE%E4%BB%B6%E9%80%9A%E7%9F%A5"><span class="toc-number">2.2.</span> <span class="toc-text">绑定域名邮件通知</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">2.3.</span> <span class="toc-text">自定义环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2"><span class="toc-number">2.4.</span> <span class="toc-text">部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BC%91%E7%9C%A0%E9%97%AE%E9%A2%98"><span class="toc-number">2.5.</span> <span class="toc-text">解决服务器休眠问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-number">2.6.</span> <span class="toc-text">测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%AE%89%E5%85%A8%E5%9F%9F%E5%90%8D"><span class="toc-number">2.7.</span> <span class="toc-text">设置安全域名</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%99%BB%E5%BD%95"><span class="toc-number">3.</span> <span class="toc-text">评论系统的登录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AF%84%E8%AE%BA%E7%95%8C%E9%9D%A2%E7%9A%84%E7%BE%8E%E5%8C%96"><span class="toc-number">4.</span> <span class="toc-text">评论界面的美化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80"><span class="toc-number">4.1.</span> <span class="toc-text">基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87"><span class="toc-number">4.2.</span> <span class="toc-text">添加背景图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A2%9E%E5%8A%A0%E5%8D%9A%E4%B8%BB%E5%B0%8F%E4%BC%99%E4%BC%B4%E6%A0%87%E8%AF%86"><span class="toc-number">4.3.</span> <span class="toc-text">增加博主小伙伴标识</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Leancloud%E6%B5%81%E6%8E%A7%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3"><span class="toc-number">5.</span> <span class="toc-text">Leancloud流控问题解决</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AEToken"><span class="toc-number">5.1.</span> <span class="toc-text">设置Token</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8B%E4%BB%93%E5%BA%93"><span class="toc-number">5.2.</span> <span class="toc-text">建立仓库</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">6.</span> <span class="toc-text">结语</span></a></li></ol></div></div><div class="card-widget" id="card-poem"><div id="poem_sentence"></div><div id="poem_info"><div id="poem_dynasty"></div><div id="poem_author"></div></div></div><script src="../js/jinrishici.js"  charset="utf-8"></script><script type="text/javascript">jinrishici.load(function(result) {
-var sentence = document.querySelector("#poem_sentence")
-var author = document.querySelector("#poem_author")
-var dynasty = document.querySelector("#poem_dynasty")
+        </article>
+        <div class="post-copyright">
+          <div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span
+              class="post-copyright-info"><a href="../index.htm">MAIFY美菲</a></span></div>
+          <div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span
+              class="post-copyright-info"><a href="51359.html">https://moonshuo.cn/posts/51359.html</a></span></div>
+          <div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span
+              class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a
+                href="javascript:if(confirm('https://creativecommons.org/licenses/by-nc-sa/4.0/'))window.location='https://creativecommons.org/licenses/by-nc-sa/4.0/'"
+                target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="../index.htm" target="_blank">偷掉月亮</a>！</span>
+          </div>
+        </div>
+        <div class="tag_share">
+          <div class="post-meta__tag-list"><a class="post-meta__tags" href="../tags/Hexo/index.htm">Hexo</a><a
+              class="post-meta__tags" href="../tags/Butterfly/index.htm">Butterfly</a></div>
+          <div class="post_share">
+            <div class="social-share" data-image="https://s1.ax1x.com/2023/02/01/pSBQJ7F.jpg"
+              data-sites="wechat,weibo,qq"></div>
+            <link rel="stylesheet" href="../pluginsSrc/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print"
+              onload="this.media='all'">
+            <script src="../pluginsSrc/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script>
+          </div>
+        </div>
+        <nav class="pagination-post" id="pagination">
+          <div class="prev-post pull-left"><a href="1481.html"><img class="prev-cover" src="../cover/9.jpg"
+                onerror="onerror=null;src='../img/404.jpg'" alt="cover of previous post">
+              <div class="pagination-info">
+                <div class="label">上一篇</div>
+                <div class="prev_info">Hexo中Buttefly主题美化进阶（八）</div>
+              </div>
+            </a></div>
+          <div class="next-post pull-right"><a href="37568.html"><img class="next-cover" src="../cover/7.jpg"
+                onerror="onerror=null;src='../img/404.jpg'" alt="cover of next post">
+              <div class="pagination-info">
+                <div class="label">下一篇</div>
+                <div class="next_info">Hexo中Buttefly主题配置美化（六）</div>
+              </div>
+            </a></div>
+        </nav>
+        <hr />
+        <div id="post-comment">
+          <div class="comment-head">
+            <div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div>
+          </div>
+          <div class="comment-wrap">
+            <div>
+              <div class="vcomment" id="vcomment"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="aside-content" id="aside-content">
+        <div class="card-widget card-info">
+          <div class="is-center">
+            <div class="avatar-img"><img src="../img/avatar.gif" onerror="this.onerror=null;this.src='/img/404.jpg'"
+                alt这里是美菲的小站" /></div>
+            <div class="author-info__name">MAIFY美菲</div>
+            <div class="author-info__description">这是我的博客网站</div>
+          </div>
+          <div class="card-info-data site-data is-center"><a href="../archives/index.htm">
+              <div class="headline">文章</div>
+              <div class="length-num">14</div>
+            </a><a href="../tags/index.htm">
+              <div class="headline">标签</div>
+              <div class="length-num">2</div>
+            </a><a href="../categories/index.htm">
+              <div class="headline">分类</div>
+              <div class="length-num">1</div>
+            </a></div>
+          <div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:2410419801@qq.com"
+              target="_blank" title="邮箱"><i class="iconfont icon-youxiang"></i></a><a class="social-icon"
+              href="tencent://message/?uin=2410419801&amp;Site=Sambow&amp;Menu=yes" target="_blank" title="QQ"><i
+                class="iconfont icon-QQ1"></i></a><a class="social-icon"
+              href="javascript:if(confirm('打开我的个人知乎主页'))window.location='https://www.zhihu.com/people/0t7fxx'"
+              target="_blank" title="知乎"><i class="iconfont icon-shejiaotubiao-10"></i></a></div>
+        </div>
+        <div class="sticky_layout">
+          <div class="card-widget" id="card-toc">
+            <div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span>
+            </div>
+            <div class="toc-content">
+              <ol class="toc">
+                <li class="toc-item toc-level-1"><a class="toc-link"
+                    href="#Valine%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.</span> <span
+                      class="toc-text">Valine系统的设置</span></a>
+                  <ol class="toc-child">
+                    <li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span
+                          class="toc-number">1.1.</span> <span class="toc-text">介绍</span></a></li>
+                    <li class="toc-item toc-level-2"><a class="toc-link"
+                        href="#%E6%9B%B4%E6%94%B9%E9%85%8D%E7%BD%AE"><span class="toc-number">1.2.</span> <span
+                          class="toc-text">更改配置</span></a></li>
+                  </ol>
+                </li>
+                <li class="toc-item toc-level-1"><a class="toc-link" href="#Valine%E4%BD%BF%E7%94%A8"><span
+                      class="toc-number">2.</span> <span class="toc-text">Valine使用</span></a>
+                  <ol class="toc-child">
+                    <li class="toc-item toc-level-2"><a class="toc-link"
+                        href="#%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE"><span class="toc-number">2.1.</span> <span
+                          class="toc-text">基础配置</span></a></li>
+                    <li class="toc-item toc-level-2"><a class="toc-link"
+                        href="#%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D%E9%82%AE%E4%BB%B6%E9%80%9A%E7%9F%A5"><span
+                          class="toc-number">2.2.</span> <span class="toc-text">绑定域名邮件通知</span></a></li>
+                    <li class="toc-item toc-level-2"><a class="toc-link"
+                        href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span
+                          class="toc-number">2.3.</span> <span class="toc-text">自定义环境变量</span></a></li>
+                    <li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2"><span
+                          class="toc-number">2.4.</span> <span class="toc-text">部署</span></a></li>
+                    <li class="toc-item toc-level-2"><a class="toc-link"
+                        href="#%E8%A7%A3%E5%86%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BC%91%E7%9C%A0%E9%97%AE%E9%A2%98"><span
+                          class="toc-number">2.5.</span> <span class="toc-text">解决服务器休眠问题</span></a></li>
+                    <li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span
+                          class="toc-number">2.6.</span> <span class="toc-text">测试</span></a></li>
+                    <li class="toc-item toc-level-2"><a class="toc-link"
+                        href="#%E8%AE%BE%E7%BD%AE%E5%AE%89%E5%85%A8%E5%9F%9F%E5%90%8D"><span
+                          class="toc-number">2.7.</span> <span class="toc-text">设置安全域名</span></a></li>
+                  </ol>
+                </li>
+                <li class="toc-item toc-level-1"><a class="toc-link"
+                    href="#%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%99%BB%E5%BD%95"><span
+                      class="toc-number">3.</span> <span class="toc-text">评论系统的登录</span></a></li>
+                <li class="toc-item toc-level-1"><a class="toc-link"
+                    href="#%E8%AF%84%E8%AE%BA%E7%95%8C%E9%9D%A2%E7%9A%84%E7%BE%8E%E5%8C%96"><span
+                      class="toc-number">4.</span> <span class="toc-text">评论界面的美化</span></a>
+                  <ol class="toc-child">
+                    <li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80"><span
+                          class="toc-number">4.1.</span> <span class="toc-text">基础</span></a></li>
+                    <li class="toc-item toc-level-2"><a class="toc-link"
+                        href="#%E6%B7%BB%E5%8A%A0%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87"><span
+                          class="toc-number">4.2.</span> <span class="toc-text">添加背景图片</span></a></li>
+                    <li class="toc-item toc-level-2"><a class="toc-link"
+                        href="#%E5%A2%9E%E5%8A%A0%E5%8D%9A%E4%B8%BB%E5%B0%8F%E4%BC%99%E4%BC%B4%E6%A0%87%E8%AF%86"><span
+                          class="toc-number">4.3.</span> <span class="toc-text">增加博主小伙伴标识</span></a></li>
+                  </ol>
+                </li>
+                <li class="toc-item toc-level-1"><a class="toc-link"
+                    href="#Leancloud%E6%B5%81%E6%8E%A7%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3"><span
+                      class="toc-number">5.</span> <span class="toc-text">Leancloud流控问题解决</span></a>
+                  <ol class="toc-child">
+                    <li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AEToken"><span
+                          class="toc-number">5.1.</span> <span class="toc-text">设置Token</span></a></li>
+                    <li class="toc-item toc-level-2"><a class="toc-link"
+                        href="#%E5%BB%BA%E7%AB%8B%E4%BB%93%E5%BA%93"><span class="toc-number">5.2.</span> <span
+                          class="toc-text">建立仓库</span></a></li>
+                  </ol>
+                </li>
+                <li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span
+                      class="toc-number">6.</span> <span class="toc-text">结语</span></a></li>
+              </ol>
+            </div>
+          </div>
+          <div class="card-widget" id="card-poem">
+            <div id="poem_sentence"></div>
+            <div id="poem_info">
+              <div id="poem_dynasty"></div>
+              <div id="poem_author"></div>
+            </div>
+          </div>
+          <script src="../js/jinrishici.js" charset="utf-8"></script>
+          <script type="text/javascript">jinrishici.load(function (result) {
+              var sentence = document.querySelector("#poem_sentence")
+              var author = document.querySelector("#poem_author")
+              var dynasty = document.querySelector("#poem_dynasty")
 
-var sentenceText = result.data.content
-sentenceText = sentenceText.substr(0, sentenceText.length - 1);
-sentence.innerHTML = sentenceText
-dynasty.innerHTML = result.data.origin.dynasty
-author.innerHTML = result.data.origin.author + '《' + result.data.origin.title + '》'
-});</script><div class="card-widget card-calendar"><div class="card-content"><div class="item-headline"><i class="fas fa-calendar"></i><span>文章日历</span></div><div class="widget" id="calendar"></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 By MAIFY美菲</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="javascript:if(confirm('https://hexo.io/'))window.location='https://hexo.io/'" >Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="javascript:if(confirm('https://github.com/jerryc127/hexo-theme-butterfly'))window.location='https://github.com/jerryc127/hexo-theme-butterfly'" >Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="../js/utils.js" ></script><script src="../js/main.js" ></script><script src="../pluginsSrc/@fancyapps/ui/dist/fancybox.umd.js" ></script><script src="../js/search/local-search.js" ></script><div class="js-pjax"><script>if (!window.MathJax) {
-  window.MathJax = {
-    tex: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"]],
-      tags: 'ams'
-    },
-    chtml: {
-      scale: 1.2
-    },
-    options: {
-      renderActions: {
-        findScript: [10, doc => {
-          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
-            const display = !!node.type.match(/; *mode=display/)
-            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
-            const text = document.createTextNode('')
-            node.parentNode.replaceChild(text, node)
-            math.start = {node: text, delim: '', n: 0}
-            math.end = {node: text, delim: '', n: 0}
-            doc.math.push(math)
-          }
-        }, ''],
-        insertScript: [200, () => {
-          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
-            const target = node.parentNode
-            if (target.nodeName.toLowerCase() === 'li') {
-              target.parentNode.classList.add('has-jax')
-            } else {
-              target.classList.add('has-jax')
+              var sentenceText = result.data.content
+              sentenceText = sentenceText.substr(0, sentenceText.length - 1);
+              sentence.innerHTML = sentenceText
+              dynasty.innerHTML = result.data.origin.dynasty
+              author.innerHTML = result.data.origin.author + '《' + result.data.origin.title + '》'
+            });</script>
+          <div class="card-widget card-calendar">
+            <div class="card-content">
+              <div class="item-headline"><i class="fas fa-calendar"></i><span>文章日历</span></div>
+              <div class="widget" id="calendar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div id="footer-wrap">
+        <div class="copyright">&copy;2023 By MAIFY美菲</div>
+        <div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener"
+            href="javascript:if(confirm('https://hexo.io/'))window.location='https://hexo.io/'">Hexo</a><span
+            class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener"
+            href="javascript:if(confirm('https://github.com/jerryc127/hexo-theme-butterfly'))window.location='https://github.com/jerryc127/hexo-theme-butterfly'">Butterfly</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div id="rightside">
+    <div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i
+          class="fas fa-book-open"></i></button><a class="icon-V hidden" onclick="switchNightMode()"
+        title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024">
+          <use id="modeicon" xlink:href="#icon-moon"></use>
+        </svg></a><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button>
+    </div>
+    <div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i
+          class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button"
+        title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i
+          class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i
+          class="fas fa-arrow-up"></i></button></div>
+  </div>
+  <div id="local-search">
+    <div class="search-dialog">
+      <nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button
+          class="search-close-button"><i class="fas fa-times"></i></button></nav>
+      <div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span> 数据库加载中</span></div>
+      <div class="search-wrap">
+        <div id="local-search-input">
+          <div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text" /></div>
+        </div>
+        <hr />
+        <div id="local-search-results"></div>
+      </div>
+    </div>
+    <div id="search-mask"></div>
+  </div>
+  <div>
+    <script src="../js/utils.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../pluginsSrc/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script src="../js/search/local-search.js"></script>
+    <div class="js-pjax">
+      <script>if (!window.MathJax) {
+          window.MathJax = {
+            tex: {
+              inlineMath: [['$', '$'], ["\\(", "\\)"]],
+              tags: 'ams'
+            },
+            chtml: {
+              scale: 1.2
+            },
+            options: {
+              renderActions: {
+                findScript: [10, doc => {
+                  for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+                    const display = !!node.type.match(/; *mode=display/)
+                    const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+                    const text = document.createTextNode('')
+                    node.parentNode.replaceChild(text, node)
+                    math.start = { node: text, delim: '', n: 0 }
+                    math.end = { node: text, delim: '', n: 0 }
+                    doc.math.push(math)
+                  }
+                }, ''],
+                insertScript: [200, () => {
+                  document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+                    const target = node.parentNode
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax')
+                    } else {
+                      target.classList.add('has-jax')
+                    }
+                  });
+                }, '', false]
+              }
             }
-          });
-        }, '', false]
-      }
-    }
-  }
-  
-  const script = document.createElement('script')
-  script.src = '../pluginsSrc/mathjax/es5/tex-mml-chtml.js'
-  script.id = 'MathJax-script'
-  script.async = true
-  document.head.appendChild(script)
-} else {
-  MathJax.startup.document.state(0)
-  MathJax.texReset()
-  MathJax.typeset()
-}</script><script>function loadValine () {
-  function initValine () {
-    const valine = new Valine(Object.assign({
-      el: '#vcomment',
-      appId: 'jprrWHMnf6HHsFTK7Bbcr7Kh-gzGzoHsz',
-      appKey: '608GDkDGq3eOLz8B3LSZo467',
-      avatar: 'monsterid',
-      serverURLs: 'https://jprrwhmn.lc-cn-n1-shared.com',
-      emojiMaps: "",
-      master: 'ef2aca03b77e6934e3a45ccc751c5e91',   //博主邮箱md5
-      tagMeta: ["色批博主","小伙伴","访客"],     //标识字段名
-      friends:  [],  //小伙伴邮箱Md5
-      path: window.location.pathname,
-      visitor: true
-    }, null))
-  }
+          }
 
-  if (typeof Valine === 'function') initValine() 
-  else getScript('../js/Valine.min.js').then(initValine)
-}
+          const script = document.createElement('script')
+          script.src = '../pluginsSrc/mathjax/es5/tex-mml-chtml.js'
+          script.id = 'MathJax-script'
+          script.async = true
+          document.head.appendChild(script)
+        } else {
+          MathJax.startup.document.state(0)
+          MathJax.texReset()
+          MathJax.typeset()
+        }</script>
+      <script>function loadValine() {
+          function initValine() {
+            const valine = new Valine(Object.assign({
+              el: '#vcomment',
+              appId: 'jprrWHMnf6HHsFTK7Bbcr7Kh-gzGzoHsz',
+              appKey: '608GDkDGq3eOLz8B3LSZo467',
+              avatar: 'monsterid',
+              serverURLs: 'https://jprrwhmn.lc-cn-n1-shared.com',
+              emojiMaps: "",
+              master: 'ef2aca03b77e6934e3a45ccc751c5e91',   //博主邮箱md5
+              tagMeta: ["色批博主", "小伙伴", "访客"],     //标识字段名
+              friends: [],  //小伙伴邮箱Md5
+              path: window.location.pathname,
+              visitor: true
+            }, null))
+          }
 
-if ('Valine' === 'Valine' || !true) {
-  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
-  else setTimeout(loadValine, 0)
-} else {
-  function loadOtherComment () {
-    loadValine()
-  }
-}</script></div><script src="../js/jquery.js" ></script><script src="../js/foot.js" ></script><script src="../js/nav.js" ></script><script type="text/javascript" src="../js/languages.js" ></script><script type="text/javascript" src="../js/calendar.js" ></script><script src="../js/weather.js" ></script><script src="../js/pace.min.js" ></script><script src="../js/copy.js" ></script><script src="../js/toastr.min.js" ></script><canvas id="universe"></canvas><script defer src="../js/universe.js" ></script><script defer src="../live2d-widget-master/autoload.js" ></script><script src="../js/sun_moon.js"  async></script><script id="click-heart" src="../pluginsSrc/butterfly-extsrc/dist/click-heart.min.js"  async="async" mobile="false"></script><script src="../pluginsSrc/pjax/pjax.min.js" ></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+          if (typeof Valine === 'function') initValine()
+          else getScript('../js/Valine.min.js').then(initValine)
+        }
 
-var pjax = new Pjax({
-  elements: 'a:not([target="_blank"]):not([href="https://moonshuo.cn/movies/"]):not([href="https://www.csdn.net/"]):not([href="https://moonshuo.cn/games/"])',
-  selectors: pjaxSelectors,
-  cacheBust: false,
-  analytics: false,
-  scrollRestoration: false
-})
+        if ('Valine' === 'Valine' || !true) {
+          if (true) btf.loadComment(document.getElementById('vcomment'), loadValine)
+          else setTimeout(loadValine, 0)
+        } else {
+          function loadOtherComment() {
+            loadValine()
+          }
+        }</script>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/foot.js"></script>
+    <script src="../js/nav.js"></script>
+    <script type="text/javascript" src="../js/languages.js"></script>
+    <script type="text/javascript" src="../js/calendar.js"></script>
+    <script src="../js/weather.js"></script>
+    <script src="../js/pace.min.js"></script>
+    <script src="../js/copy.js"></script>
+    <script src="../js/toastr.min.js"></script><canvas id="universe"></canvas>
+    <script defer src="../js/universe.js"></script>
+    <script defer src="../live2d-widget-master/autoload.js"></script>
+    <script src="../js/sun_moon.js" async></script>
+    <script id="click-heart" src="../pluginsSrc/butterfly-extsrc/dist/click-heart.min.js" async="async"
+      mobile="false"></script>
+    <script src="../pluginsSrc/pjax/pjax.min.js"></script>
+    <script>let pjaxSelectors = ["head > title", "#config-diff", "#body-wrap", "#rightside-config-hide", "#rightside-config-show", ".js-pjax"]
 
-document.addEventListener('pjax:send', function () {
+      var pjax = new Pjax({
+        elements: 'a:not([target="_blank"]):not([href="https://moonshuo.cn/movies/"]):not([href="https://www.csdn.net/"]):not([href="https://moonshuo.cn/games/"])',
+        selectors: pjaxSelectors,
+        cacheBust: false,
+        analytics: false,
+        scrollRestoration: false
+      })
 
-  // removeEventListener scroll 
-  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
-  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+      document.addEventListener('pjax:send', function () {
 
-  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
-  
-  if (window.aplayers) {
-    for (let i = 0; i < window.aplayers.length; i++) {
-      if (!window.aplayers[i].options.fixed) {
-        window.aplayers[i].destroy()
-      }
-    }
-  }
+        // removeEventListener scroll 
+        window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+        window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
 
-  typeof typed === 'object' && typed.destroy()
+        document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
 
-  //reset readmode
-  const $bodyClassList = document.body.classList
-  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+        if (window.aplayers) {
+          for (let i = 0; i < window.aplayers.length; i++) {
+            if (!window.aplayers[i].options.fixed) {
+              window.aplayers[i].destroy()
+            }
+          }
+        }
 
-  typeof disqusjs === 'object' && disqusjs.destroy()
-})
+        typeof typed === 'object' && typed.destroy()
 
-document.addEventListener('pjax:complete', function () {
-  window.refreshFn()
+        //reset readmode
+        const $bodyClassList = document.body.classList
+        $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
 
-  document.querySelectorAll('script[data-pjax]').forEach(item => {
-    const newScript = document.createElement('script')
-    const content = item.text || item.textContent || item.innerHTML || ""
-    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
-    newScript.appendChild(document.createTextNode(content))
-    item.parentNode.replaceChild(newScript, item)
-  })
+        typeof disqusjs === 'object' && disqusjs.destroy()
+      })
 
-  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+      document.addEventListener('pjax:complete', function () {
+        window.refreshFn()
 
-  typeof chatBtnFn === 'function' && chatBtnFn()
-  typeof panguInit === 'function' && panguInit()
+        document.querySelectorAll('script[data-pjax]').forEach(item => {
+          const newScript = document.createElement('script')
+          const content = item.text || item.textContent || item.innerHTML || ""
+          Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+          newScript.appendChild(document.createTextNode(content))
+          item.parentNode.replaceChild(newScript, item)
+        })
 
-  // google analytics
-  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+        GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
 
-  // baidu analytics
-  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+        typeof chatBtnFn === 'function' && chatBtnFn()
+        typeof panguInit === 'function' && panguInit()
 
-  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+        // google analytics
+        typeof gtag === 'function' && gtag('config', '', { 'page_path': window.location.pathname });
 
-  // prismjs
-  typeof Prism === 'object' && Prism.highlightAll()
-})
+        // baidu analytics
+        typeof _hmt === 'object' && _hmt.push(['_trackPageview', window.location.pathname]);
 
-document.addEventListener('pjax:error', (e) => {
-  if (e.request.status === 404) {
-    pjax.loadUrl('https://moonshuo.cn/404.html')
-  }
-})</script><script async data-pjax src="../../busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script></div></body></html>
+        typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+        // prismjs
+        typeof Prism === 'object' && Prism.highlightAll()
+      })
+
+      document.addEventListener('pjax:error', (e) => {
+        if (e.request.status === 404) {
+          pjax.loadUrl('https://moonshuo.cn/404.html')
+        }
+      })</script>
+    <script async data-pjax src="../../busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  </div>
+</body>
+
+</html>
