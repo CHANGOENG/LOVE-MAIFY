@@ -545,7 +545,7 @@ div#archive {
 	background: var(--trans-light);
 	border: var(--border-style);
 	border-radius: 20px;
-	--border-style: 2px solid rgb(82, 224, 132);
+	--border-style: 2px solid rgba(208, 245, 221, 0.801);
 }
 
 
