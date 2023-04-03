@@ -3884,7 +3884,7 @@ li.categoryBar-list-item {
 }
 
 li.categoryBar-list-item:hover {
-  background-size: 110% !important;
+  background-size: 100% !important;
   -webkit-box-shadow: inset 500px 50px 50px 50px rgba(50, 50, 50, 0.6);
   box-shadow: inset 500px 50px 50px 50px rgba(50, 50, 50, 0.6);
 }
