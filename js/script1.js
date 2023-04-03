@@ -6,7 +6,7 @@
 
 // add elemnts
 const bgBody = ["#e5e7e9", "#ff4545", "#f8ded3", "#ffc382", "#f5eda6", "#ffcbdc", "#dcf3f3"];
-const body1 = document.body1;
+const body1 = document.body;
 const player = document.querySelector(".player");
 const playerHeader = player.querySelector(".player__header");
 const playerControls = player.querySelector(".player__controls");
