@@ -3,6 +3,10 @@
   font-display: swap;
   src: url("./1.ttf") format("truetype");
 }
-
+@font-face{
+font-family: 'QQ';
+font-display: swap;
+src: url("./huaguangbudouti.ttf") format("truetype");
+}
 
 
